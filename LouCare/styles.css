@@ -1,3 +1,7 @@
+@import "tailwindcss";
+@plugin "@midudev/tailwind-animations";
+
+
 :root {
   --primary-color: #e5dbdb;
   --secondary-color: #fff;
