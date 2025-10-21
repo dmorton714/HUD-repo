@@ -1,5 +1,6 @@
 <script setup>
 import '@/assets/main.css'
+
 const shelters = [
   {
     category: "Single Overnight Emergency Shelters",
