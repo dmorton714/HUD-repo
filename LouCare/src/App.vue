@@ -1,9 +1,22 @@
 <script setup>
-import Header from './components/Header.vue';
+import HeaderNav from './components/HeaderNav.vue';
+import StreetTips from './components/StreetTips.vue';
 </script>
 
 <template>
-  <Header />
+  <HeaderNav />
+
+ <div class="body">
+  <StreetTips />
+ </div> 
+
 </template>
 
-<style scoped></style>
+<style scoped>
+.body {
+  padding-top: 11rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+</style>
