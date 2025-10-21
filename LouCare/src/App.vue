@@ -11,4 +11,11 @@ import Header from './components/common/Header.vue';
   <RouterView />
 </template>
 
-<style scoped></style>
+<style scoped>
+.body {
+  padding-top: 11rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+</style>
