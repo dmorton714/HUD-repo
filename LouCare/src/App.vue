@@ -1,15 +1,14 @@
 <script setup>
-import HeaderNav from './components/HeaderNav.vue';
-import StreetTips from './components/StreetTips.vue';
+import { RouterView } from 'vue-router';
+
+import Header from './components/common/Header.vue';
+
+
 </script>
 
 <template>
-  <HeaderNav />
-
- <div class="body">
-  <StreetTips />
- </div> 
-
+  <Header />
+  <RouterView />
 </template>
 
 <style scoped>

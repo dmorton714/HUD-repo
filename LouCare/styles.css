@@ -1,15 +1,31 @@
+@import "tailwindcss";
+@plugin "@midudev/tailwind-animations";
+
+
 :root {
-  --primary-color: #e5dbdb;
-  --secondary-color: #fff;
+  --primary-color: #fff;
+  --text-color: #000;
 }
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
 
 body {
   background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.4;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+  font-size: 1.1rem;
+  font-weight: 100;
+
 }
