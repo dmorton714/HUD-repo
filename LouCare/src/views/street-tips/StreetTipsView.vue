@@ -1,7 +1,7 @@
 <script setup>
 import '@/assets/main.css'
 import Hero from '@/components/common/Hero.vue'
-import Resources from '@/components/common/Resources.vue'
+import CardsSidebar from './CardsSidebar.vue'
 
 
 // Shelters
@@ -188,23 +188,6 @@ const generalInfo = [
 
 
 
-const streetTips = [
-    'Shelters',
-    'White Flag',
-    'Family & Children',
-    'Outreach',
-    'Food',
-    'Healthcare',
-    'Jobs & Education',
-    'Transitional Housing',
-    'LGBTQ+',
-    'Veterans',
-    'Partner Violence & Human Trafficking',
-    'General Resources'
-]
-
-
-
 </script>
 
 <template>
@@ -213,7 +196,10 @@ const streetTips = [
         title="Street Tips"
         description="A quick reference guide for people in need of shelter, outreach services, food, healthcare, and other help in Louisville, KY" 
         />
-        <Resources :resources="streetTips" class="grid grid-cols-4 justify-items-center items-center gap-14 w-full"/>
+        <CardsSidebar />
+
+        
+
     </div>
 </template>
 
