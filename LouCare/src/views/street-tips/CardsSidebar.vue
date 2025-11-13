@@ -56,10 +56,10 @@ const streetTips = [
 </script>
 
 <template>
-    <div class="bg-[var(--light-gray)] flex flex-col w-1/4 h-full p-10 rounded-md">
+    <div class="bg-[var(--light-gray)] flex flex-col h-full p-1 rounded-md w-full">
         <h2 class="text-center">Resources</h2>
         <hr class="w-full border-gray-600 mt-4 mb-16">
-        <div class="flex flex-col items-center justify-center gap-10">
+        <div class="flex flex-col items-center justify-center gap-1">
             <ResourceCard v-for="streetTip in streetTips" 
             :key="streetTip.resource" 
             :resource="streetTip.resource"

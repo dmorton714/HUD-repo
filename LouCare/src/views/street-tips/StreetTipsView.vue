@@ -191,16 +191,64 @@ const generalInfo = [
 </script>
 
 <template>
-    <div class="w-full p-10 overflow-hidden">
-        <Hero 
+  <div class="content-container">
+    <aside class="sidebar">
+      <CardsSidebar />
+    </aside>
+
+    <main class="main-content">
+      <Hero 
         title="Street Tips"
         description="A quick reference guide for people in need of shelter, outreach services, food, healthcare, and other help in Louisville, KY" 
-        />
-        <CardsSidebar />
-
-        
-
-    </div>
+      />
+    </main>
+  </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.content-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  max-width: 100%;
+  margin-top: 110px;
+  padding: 10px;
+}
+
+/* Sidebar on the left */
+.sidebar {
+  flex: 1;
+  min-width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 10px;
+}
+
+/* Main hero content */
+.main-content {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Responsive stacking on small screens */
+@media (max-width: 900px) {
+  .content-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebar {
+    max-width: 100%;
+    order: 2;
+  }
+
+  .main-content {
+    order: 1;
+  }
+}
+</style>
