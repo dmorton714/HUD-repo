@@ -45,3 +45,8 @@ p {
   font-weight: 100;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+.active {
+  background-color: var(--gold);
+  transform: scale(1.05);
+}

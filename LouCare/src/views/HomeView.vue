@@ -1,5 +1,5 @@
 <script setup>
-import Hero from './sections/Hero.vue';
+import Hero from '@/components/home/Hero.vue';
 </script>
 
 <template>
