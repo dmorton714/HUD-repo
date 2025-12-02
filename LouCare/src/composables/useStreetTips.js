@@ -62,7 +62,7 @@ const shelters = [
     {
         subcategory: "Single Overnight Emergency Shelters",
         note: "Call (502) 637-2337 for a bed unless otherwise noted",
-        resourceslist: [
+        resourceList: [
         {
             name: "Center Ministries (men)",
             address: "757 S. Brook St",
@@ -102,7 +102,7 @@ const shelters = [
     },
     {
         subcategory: "Safe Outdoor Space",
-        resourceslist: [
+        resourceList: [
         {
             name: "The Hope Village (run by The Hope Buss)",
             address: "212 E College St",
@@ -115,7 +115,7 @@ const shelters = [
     {
         subcategory: "Family Overnight Emergency Shelters",
         note: "Call (502) 637-2337 for family shelter information",
-        resourceslist: [
+        resourceList: [
         {
             name: "Salvation Army Center of Hope",
             address: "911 S. Brook St.",
@@ -141,7 +141,7 @@ const shelters = [
     },
     {
         subcategory: "Young Adult Shelters / Centers",
-        resourceslist: [
+        resourceList: [
         {
             name: "YMCA Shelter / Youth Development Center",
             address: "2400 Crittenden Dr",
@@ -160,7 +160,7 @@ const shelters = [
     },
     {
         subcategory: "Resource Centers",
-        resourceslist: [
+        resourceList: [
         {
             name: "VOCAL-KY",
             address: "723 S. Brook St",
@@ -172,7 +172,7 @@ const shelters = [
     },
     {
         subcategory: "Emergency Day Shelters",
-        resourceslist: [
+        resourceList: [
         {
             name: "Exodus Family Ministries",
             address: "4205 Cane Run Rd",
@@ -230,7 +230,7 @@ const whiteFlag = [
                         other critical info. Sign up at https://louhomeless.org/rave. `
     },
     {
-        subcategory: null,
+        subcategory: "White Flag",
         note: null,
         resourceList: [
         {

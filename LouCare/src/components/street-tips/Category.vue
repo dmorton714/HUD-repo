@@ -1,6 +1,6 @@
 <script setup>
-import { useStreetTips } from '@/composables/useStreetTips';
 import Subcategory from './Subcategory.vue';
+
 
 defineProps({
     categoryName: {
@@ -9,8 +9,11 @@ defineProps({
     },
     categoryGeneralDetails: {
         type: String
+    },
+    subcategories: {
+        type: Array,
     }
-})
+});
 
 
 </script>
@@ -19,8 +22,12 @@ defineProps({
     <div class="bg-[var(--light-gray)] flex flex-col w-full h-full justify-center items-center p-4 gap-10 rounded-md">
         <h2>{{ categoryName }}</h2>
         <p v-if="categoryGeneralDetails">{{ categoryGeneralDetails }}</p>
-        <div class="bg-blue-500 flex flex-col w-full h-full justify-center items-center p-4 gap-6 rounded-md">
-            Subcategories
+        <div class="flex flex-col w-full h-full justify-center items-center p-4 gap-6 rounded-md">
+            <Subcategory v-for="subcategory in subcategories" 
+            :key="subcategory.subcategory" 
+            :subcategoryName="subcategory.subcategory"
+            :subcategoryGeneralDetails="subcategory.note"
+            :resources="subcategory.resourceList" />
         </div>
     </div>
 </template>
