@@ -15,6 +15,7 @@ defineProps({
 
 })
 
+
 const expandSubcategory = ref(false);
 const toggle = () => {
     expandSubcategory.value = !expandSubcategory.value;
@@ -22,16 +23,24 @@ const toggle = () => {
 </script>
 
 <template>
-    <div class="flex justify-center items-center p-2">
-        <p>{{ subcategoryName }}</p>
-        <button class="flex justify-center items-center self-end" @click="toggle">^?</button>
-    </div>
-    <div class="flex flex-col justify-center items-center w-full">
-        <p>{{ subcategoryGeneralDetails }}</p>
-        <div class="flex justify-center items-center p-2 gap-6">
-            <div v-for="resource in resources" :key="resource.name">
-                <Resource :resource="resource" />
+    <div class="flex flex-col justify-center items-center w-full gap-1.5">
+        <div class="bg-[var(--blue)] flex w-full h-full justify-center items-center py-4 px-8 rounded-xl">
+            <h3 class="text-center text-white" v-html="subcategoryName"></h3>
+            <button class="bg-[var(--medium-blue)] flex ml-auto p-2 rounded-full cursor-pointer hover:bg-[var(--light-blue)] hover:scale-125 transition-all duration-200" @click="toggle">
+                <img src="/down-arrow.svg" alt="Down Arrow" class="w-4 h-4 z-10">
+            </button>
+        </div>
+        <div v-if="expandSubcategory" class="bg-[var(--medium-gray)] flex flex-col justify-center items-center w-full p-4 gap-6 rounded-xl animate-flip-in-y">
+            <p v-if="subcategoryGeneralDetails" v-html="subcategoryGeneralDetails"></p>
+            <div class="flex flex-wrap justify-center items-center w-full p-2 gap-6">
+                <Resource v-for="resource in resources" 
+                :key="resource.name" 
+                :name="resource.name" 
+                :address="resource.address" 
+                :contact="resource.contact" 
+                :details="resource.details" />
             </div>
         </div>
     </div>
+    
 </template>

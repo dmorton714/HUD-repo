@@ -21,7 +21,7 @@ const showDescription = ref(false);
     <div :class="[{active:isActive}, 'bg-[var(--blue)] flex w-full h-full gap-4 p-4 items-center justify-between rounded-md hover:bg-[var(--gold)] hover:scale-105 transition-all duration-200 cursor-pointer']">
         <div class="flex w-full h-full items-center justify-center"
         @click="$emit('categorySelected', categoryName)">
-            <p class="text-center text-white w-full">{{ categoryName }}</p>
+            <h3 class="text-center text-white w-full">{{ categoryName }}</h3>
         </div>
         <div class="flex items-center justify-center hover:cursor-pointer relative" @click="showDescription = true" @mouseleave="showDescription = false">
             <img src="/question.svg" alt="Question mark" class="w-8 h-8">

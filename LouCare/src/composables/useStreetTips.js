@@ -1,5 +1,9 @@
 
-
+function createMapLink(address) {
+    if (!address) return null;
+    const encodedAddress = encodeURIComponent(address);
+    return `<a href="https://www.google.com/maps/search/?api=1&query=${encodedAddress}" target="_blank">${address}</a>`;
+}
 
 // Street tips separated by Categories (Shelters, White Flag, etc). 
 // Each category is an array of objects. 
@@ -39,10 +43,11 @@ const shelters = [
         resourceList: [
         {
             name: "Common Assessment",
-            address: "1300 S. 4th Street #200 -- Walk-ins accepted: Tuesday-Friday, 10am-3pm",
-            contact: "tel:(502) 637-2080",
+            address: [createMapLink("1300 S. 4th Street #200")],
+            contact: ["<a href='tel:(502) 637-2080'>(502) 637-2080</a>"],
             email: null,
-            details: `Calls: Mon-Fri, 10am-3pm`
+            details: `Calls: Mon-Fri, 10am-3pm <br>
+                        Walk-ins accepted: Tuesday-Friday, 10am-3pm`
         }
         ],
     },
@@ -52,161 +57,162 @@ const shelters = [
         resourceList: [
         {
             name: "Coordinated Shelter Access",
-            address: "1300 S. 4th Street #250 -- Open: Mon-Fri, 10am-1pm",
-            contact: "tel:(502) 637-2337",
+            address: [createMapLink("1300 S. 4th Street #250")],
+            contact: ["<a href='tel:(502) 637-2337'>(502) 637-2337</a>"],
             email: "csa@louhomeless.org",
-            details: `Daily, 10am-1pm (CSA is closed on these holidays, so go directly to single emergency shelters (no walk-ins accepted in family shelters): New Year's Day, MLK Day, Memorial Day, Juneteenth, Fourth of July, Labor Day, Thanksgiving, day after Thanksgiving, Christmas Eve, Christmas Day)`
+            details: `CSA is closed on these holidays, so go directly to single emergency shelters. No walk-ins accepted in family shelters) <br> New Year's Day, MLK Day, Memorial Day, Juneteenth, Fourth of July, Labor Day, Thanksgiving, day after Thanksgiving, Christmas Eve, Christmas Day
+                        <br> Open: Mon-Fri, 10am-1pm`
         }
         ],
     },
     {
         subcategory: "Single Overnight Emergency Shelters",
         note: "Call (502) 637-2337 for a bed unless otherwise noted",
-        resourceslist: [
+        resourceList: [
         {
             name: "Center Ministries (men)",
-            address: "757 S. Brook St",
+            address: [createMapLink("757 S. Brook St")],
             contact: null,
             email: null,
-            details: "Open 7pm-6:30am. Men only; meals not provided."
+            details: "Open 7pm-6:30am <br> Men only <br> Meals not provided."
         },
         {
             name: "Salvation Army Center of Hope",
-            address: "911 S. Brook St",
+            address: [createMapLink("911 S. Brook St")],
             contact: null,
             email: null,
-            details: "Check in: 5:30p women / 6p men. Adults; meals; check in at 9p for 18-24yos."
+            details: "Check in: 5:30p women / 6p men <br> Adults Meals <br> Check in at 9p for 18-24 yos"
         },
         {
             name: "St. Vincent de Paul Ozanam Inn (men)",
-            address: "1034 S. Jackson St.",
-            contact: "tel:(502) 301-8678",
+            address: [createMapLink("1034 S. Jackson St.")],
+            contact: ["<a href='tel:(502) 301-8678'>(502) 301-8678</a>"],
             email: null,
-            details: "Men only; meals; check-in times vary, call ahead."
+            details: "Men only <br> Meals <br> Check-in times vary, call ahead"
         },
         {
             name: "Wayside Christian Mission (singles & low barrier)",
-            address: "432 E Jefferson St",
+            address: [createMapLink("432 E Jefferson St")],
             contact: null,
             email: null,
-            details: "Check-in 4p (s), 3:30p (LB). Men & women; meals provided."
+            details: "Check-in 4p (s), 3:30p (LB) <br> Men & women <br> Meals provided"
         },
         {
             name: "The Healing Place (addiction recovery)",
-            address: "Men: 1020 W Market St. <br> Women: 1503 15th St.",
-            contact: "tel:(502) 585-4848",
+            address: [createMapLink("Men: 1020 W Market St."), createMapLink("Women: 1503 15th St.")],
+            contact: ["<a href='tel:(502) 585-4848'>(502) 585-4848</a>"],
             email: null,
-            details: "No reservations. First come, first served; check in 3:30pm."
+            details: "No reservations <br> First come, first served <br> Check in 3:30pm"
         },
         ]
     },
     {
         subcategory: "Safe Outdoor Space",
-        resourceslist: [
+        resourceList: [
         {
             name: "The Hope Village (run by The Hope Buss)",
-            address: "212 E College St",
-            contact: "tel:(502) 882-3900",
+            address: [createMapLink("212 E College St")],
+            contact: ["<a href='tel:(502) 882-3900'>(502) 882-3900</a>"],
             email: null,
-            details: "New residents need referral from approved agency."
+            details: "New residents need referral from approved agency"
         }
         ]
     },
     {
         subcategory: "Family Overnight Emergency Shelters",
         note: "Call (502) 637-2337 for family shelter information",
-        resourceslist: [
+        resourceList: [
         {
             name: "Salvation Army Center of Hope",
-            address: "911 S. Brook St.",
+            address: [createMapLink("911 S. Brook St.")],
             contact: null,
             email: null,
-            details: "Families; meals served."
+            details: "Families <br> Meals served"
         },
         {
             name: "Volunteers of America",
-            address: "1321 S. Preston St.",
+            address: [createMapLink("1321 S. Preston St.")],
             contact: null,
             email: null,
-            details: "Families."
+            details: "Families"
         },
         {
             name: "Wayside Christian Mission (family & low-barrier)",
-            address: "432 E. Jefferson St.",
+            address: [createMapLink("432 E. Jefferson St.")],
             contact: null,
             email: null,
-            details: "Families; meals served."
+            details: "Families <br> Meals served"
         },
         ]
     },
     {
         subcategory: "Young Adult Shelters / Centers",
-        resourceslist: [
+        resourceList: [
         {
             name: "YMCA Shelter / Youth Development Center",
-            address: "2400 Crittenden Dr",
-            contact: "tel:(502) 635-5233",
+            address: [createMapLink("2400 Crittenden Dr")],
+            contact: ["<a href='tel:(502) 635-5233'>(502) 635-5233</a>"],
             email: null,
-            details: "24/7 shelter for youth 12-17.<br> Drop-in center for 18-24yos.<br> M-F 8:30a-2p."
+            details: "24/7 shelter for youth 12-17 <br> Drop-in center for 18-24 yos <br> M-F 8:30a-2p"
         },
         {
             name: "TAYLRD (Youth Drop-In Center)",
-            address: "1020 East Broadway",
-            contact: "tel:(502) 287-0602",
+            address: [createMapLink("1020 East Broadway")],
+            contact: ["<a href='tel:(502) 287-0602'>(502) 287-0602</a>"],
             email: null,
-            details: "Drop-in for 16-25yos.<br> M-F 2-5pm"
+            details: "Drop-in for 16-25 yos <br> M-F 2-5pm"
         },
         ]
     },
     {
         subcategory: "Resource Centers",
-        resourceslist: [
+        resourceList: [
         {
             name: "VOCAL-KY",
-            address: "723 S. Brook St",
-            contact: "tel:(502) 676-0039",
+            address: [createMapLink("723 S. Brook St")],
+            contact: ["<a href='tel:(502) 676-0039'>(502) 676-0039</a>"],
             email: null,
-            details: "Drop-in center: MWTh 10am-2pm.<br> Snacks, hygiene, harm reduction supplies, respite, leadership development, organizing, more"
+            details: "Drop-in center: MWTh 10am-2pm <br> Snacks, hygiene, harm reduction supplies, respite, leadership development, organizing, more"
         },
         ]
     },
     {
         subcategory: "Emergency Day Shelters",
-        resourceslist: [
+        resourceList: [
         {
             name: "Exodus Family Ministries",
-            address: "4205 Cane Run Rd",
-            contact: "tel:(502) 614-8544 x105",
+            address: [createMapLink("4205 Cane Run Rd")],
+            contact: ["<a href='tel:(502) 614-8544,,x105'>(502) 614-8544 x105</a>"],
             email: null,
-            details: "(adults 18) <br> MWF 11a-3p (women only Wed; men only Fri)"
+            details: "Adults 18 <br> MWF 11a-3p (women only Wed; men only Fri)"
         },
         {
             name: "Center Ministries",
-            address: "757 S. Brook St",
-            contact: "tel: (502) 584-6543 x105",
+            address: [createMapLink("757 S. Brook St")],
+            contact: ["<a href='tel: (502) 584-6543,,x105'>(502) 584-6543 x105</a>"],
             email: null,
-            details: "(women & children only) <br> Mon-Fri, 8am-2pm.<br> Offers storage"
+            details: "Women & children only <br> Mon-Fri, 8am-2pm <br> Offers storage"
         },
         {
             name: "Salvation Army Day Center",
-            address: "911 S. Brook St",
-            contact: "tel:(502) 671-4900",
+            address: [createMapLink("911 S. Brook St")],
+            contact: ["<a href='tel:(502) 671-4900'>(502) 671-4900</a>"],
             email: null,
-            details: "(enter from Breckinridge) <br> Open M-F 9-3:30p <br> Adults only (18+). <br> Offers storage, clothing, closet, toiletries, lunch"
+            details: "Enter from Breckinridge <br> Open M-F 9-3:30p <br> Adults only (18+) <br> Offers storage, clothing, closet, toiletries, lunch"
         },
         {
             name: "St. John Center (men only)",
-            address: "700 E. Muhammad Ali",
-            contact: "tel:(502) 568-6758",
+            address: [createMapLink("700 E. Muhammad Ali")],
+            contact: ["<a href='tel:(502) 568-6758'>(502) 568-6758</a>"],
             email: null,
             details: "Daily 8a-4p, but W 8a-2p <br> Trans and gender diverse folx welcome"
         },
         {
             name: "UP for Women & Children",
-            address: "425 S 2nd St",
-            contact: "tel:(502) 384-0001",
+            address: [createMapLink("425 S 2nd St")],
+            contact: ["<a href='tel:(502) 384-0001'>(502) 384-0001</a>"],
             email: null,
-            details: "(women/children) <br> Open MW 9a-3pm; F 9a-1pm <br> Trans and gender diverse people welcome"
+            details: "Women/children <br> Open MW 9a-3pm; F 9a-1pm <br> Trans and gender diverse people welcome"
         }
 
         ]
@@ -230,22 +236,22 @@ const whiteFlag = [
                         other critical info. Sign up at https://louhomeless.org/rave. `
     },
     {
-        subcategory: null,
+        subcategory: "White Flag",
         note: null,
         resourceList: [
         {
             name: "Salvation Army Center of Hope",
-            address: "911 South Brook St.",
-            contact: "tel:(502) 671-4900",
+            address: [createMapLink("911 South Brook St.")],
+            contact: ["<a href='tel:(502) 671-4900'>(502) 671-4900</a>"],
             email: null,
             details: null,
         },
         {
             name: "Wayside Christian Mission",
-            address: "432 East Jefferson St.",
-            contact: "tel:(502) 742-7019",
+            address: [createMapLink("432 East Jefferson St.")],
+            contact: ["<a href='tel:(502) 742-7019'>(502) 742-7019</a>"],
             email: null,
-            details: "Call CSA at (502) 637-2337 for info & notifications",
+            details: "Call CSA at <a href='tel:(502) 637-2337'>(502) 637-2337</a> for info & notifications",
         }
         ],
     },
@@ -264,8 +270,8 @@ const familyAndChildren = [
         resourceList: [
         {
             name: "My Dog Eats First",
-            address: "2640 Gleeson Lane Ste 2D",
-            contact: "tel:(502) 694-2746",
+            address: [createMapLink("2640 Gleeson Lane Ste 2D")],
+            contact: ["<a href='tel:(502) 694-2746'>(502) 694-2746</a>"],
             email: null,
             details: "Contact for vet care, other help for houseless pets"
         }
@@ -278,7 +284,7 @@ const familyAndChildren = [
         {
             name: "McKinney-Vento federal law",
             address: null,
-            contact: "tel:(502) 485-3650",
+            contact: ["<a href='tel:(502) 485-3650'>(502) 485-3650</a>"],
             email: null,
             details: `Students experiencing homelessness are protected under McKinney-Vento federal law and have a right to remain in the same school if they move; enroll in a new school; get transportation/services; and challenge decisions`
         }
@@ -291,28 +297,28 @@ const familyAndChildren = [
         {
             name: "Overnight Shelter",
             address: null,
-            contact: "tel:(502) 637-2337",
+            contact: ["<a href='tel:(502) 637-2337'>(502) 637-2337</a>"],
             email: null,
             details: null,
         },
         {
             name: "Housing",
             address: null,
-            contact: "tel:(502) 637-2080",
+            contact: ["<a href='tel:(502) 637-2080'>(502) 637-2080</a>"],
             email: null,
             details: null,
         },
         {
             name: "Public housing or Section 8 (Housing Choice Voucher)",
             address: null,
-            contact: "tel:(502) 569-6076",
+            contact: ["<a href='tel:(502) 569-6076'>(502) 569-6076</a>"],
             email: null,
-            details: "Website: https://lmha1.org",
+            details: "Website: <a href='https://lmha1.org' target='_blank'>lmha1.org</a>",
         },
         {
             name: "Black lives matter",
             address: null,
-            contact: "tel:(502) 509-2357",
+            contact: ["<a href='tel:(502) 509-2357'>(502) 509-2357</a>"],
             email: null,
             details: "BLM provides accompaniment and resources for Black femmes and families",
         },
@@ -334,14 +340,14 @@ const outreach = [
         {
             name: "BLM Lou",
             address: null,
-            contact: "tel:(502) 509-2357",
+            contact: ["<a href='tel:(502) 509-2357'>(502) 509-2357</a>"],
             email: null,
             details: "@blacklivesmatterlouisville",
         },
         {
             name: "ChangeU",
             address: null,
-            contact: "tel:(502) 546-4502",
+            contact: ["<a href='tel:(502) 546-4502'>(502) 546-4502</a>"],
             email: null,
             details: "@changeufoundation",
         },
@@ -355,42 +361,42 @@ const outreach = [
         {
             name: "Exit 0",
             address: null,
-            contact: "tel:(502) 541-2353",
+            contact: ["<a href='tel:(502) 541-2353'>(502) 541-2353</a>"],
             email: null,
             details: "@jesuscaresatexit0",
         },
         {
             name: "Fern Creek UMC Street Reach",
             address: null,
-            contact: "tel:(502) 931-8529",
+            contact: ["<a href='tel:(502) 931-8529'>(502) 931-8529</a>"],
             email: null,
             details: "@metrostreetreach",
         },
         {
             name: "First Unitarian",
             address: null,
-            contact: "tel:(502) 585-5110",
+            contact: ["<a href='tel:(502) 585-5110'>(502) 585-5110</a>"],
             email: null,
             details: "@FirstUnitarianLouisville",
         },
         {
             name: "The Forgotten Louisville",
             address: null,
-            contact: "tel:(502) 345-9308",
+            contact: ["<a href='tel:(502) 345-9308'>(502) 345-9308</a>"],
             email: null,
             details: "@TFLoutreach",
         },
         {
             name: "Grace Crossings Church",
             address: null,
-            contact: "tel:(502) 882-2467",
+            contact: ["<a href='tel:(502) 882-2467'>(502) 882-2467</a>"],
             email: null,
             details: "@gracechurchlou",
         },
         {
             name: "Hip Hop Cares",
             address: null,
-            contact: "tel:(502) 457-5317",
+            contact: ["<a href='tel:(502) 457-5317'>(502) 457-5317</a>"],
             email: null,
             details: "@HipHopCares502",
         },
@@ -411,7 +417,7 @@ const outreach = [
         {
             name: "Lost Sheep",
             address: null,
-            contact: "tel:(502) 539-1378",
+            contact: ["<a href='tel:(502) 539-1378'>(502) 539-1378</a>"],
             email: null,
             details: "lostsheepoflouisville.org",
         },
@@ -419,7 +425,7 @@ const outreach = [
         {
             name: "Louisville Outreach for the Unsheltered (L.O.U.)",
             address: null,
-            contact: "tel:(502) 754-3464 ext. 3",
+            contact: ["<a href='tel:(502) 754-3464,,x3'>(502) 754-3464 x3</a>"],
             email: null,
             details: "@LouOutreach",
         },
@@ -427,42 +433,42 @@ const outreach = [
         {
             name: "LRCC",
             address: null,
-            contact: "tel:(502) 398-5258",
+            contact: ["<a href='tel:(502) 398-5258'>(502) 398-5258</a>"],
             email: null,
             details: "@LouisvilleRecoveryConnection",
         },
         {
             name: "RC Love Squad",
             address: null,
-            contact: "tel:(502) 805-7747",
+            contact: ["<a href='tel:(502) 805-7747'>(502) 805-7747</a>"],
             email: null,
             details: "@RiverCityLoveSquad",
         },
         {
             name: "Share the Love Outreach",
             address: null,
-            contact: "tel:(502) 649-3998",
+            contact: ["<a href='tel:(502) 649-3998'>(502) 649-3998</a>"],
             email: null,
             details: "@stloutreach",
         },
         {
             name: "South End Street Angels",
             address: null,
-            contact: "tel:(502) 422-1923",
+            contact: ["<a href='tel:(502) 422-1923'>(502) 422-1923</a>"],
             email: null,
             details: "@southendstreetangels",
         },
         {
             name: "VOCAL-KY",
             address: null,
-            contact: "tel:(502) 676-0039",
+            contact: ["<a href='tel:(502) 676-0039'>(502) 676-0039</a>"],
             email: null,
             details: "@vocalky",
         },
         {
             name: "Women of the Well",
             address: null,
-            contact: "tel:(502) 498-6018",
+            contact: ["<a href='tel:(502) 498-6018'>(502) 498-6018</a>"],
             email: null,
             details: "@WoWMinstry",
         },
@@ -475,52 +481,54 @@ const outreach = [
         {
             name: "C.A.R.E",
             address: null,
-            contact: "tel:(502) 636-3781",
+            contact: ["<a href='tel:(502) 636-3781'>(502) 636-3781</a>"],
             email: null,
             details: null,
         },
         {
             name: "Kentucky Harm Reduction Coalition",
             address: null,
-            contact: "tel:(502) 537-6061",
+            contact: ["<a href='tel:(502) 537-6061'>(502) 537-6061</a>"],
             email: null,
             details: "Access to naloxone, supplies, and medication for opioid use disorder",
         },
         {
             name: "Metro Homeless Engagement and Assessment Response Team (HEART)",
             address: null,
-            contact: "tel:(502) 574-5771",
+            contact: ["<a href='tel:(502) 574-5771'>(502) 574-5771</a>"],
             email: null,
             details: null,
         },
         {
             name: "NuLease",
             address: null,
-            contact: "tel:(502) 492-7455",
+            contact: ["<a href='tel:(502) 492-7455'>(502) 492-7455</a>"],
             email: null,
             details: "Call for recovery, mobile medical unit, and primary care services",
         },
         {
             name: "Seven Counties Services",
             address: null,
-            contact: `Homeless Outreach Team: tel:(502) 589-8926
-                        24/7 Adult Crisis Line: 988 or tel:(502) 589-4313 
-                        Schedule first appointment: tel:(502) 589-1100`,
+            contact: [
+                        "Homeless Outreach Team: <a href='tel:(502) 589-8926'>(502) 589-8926</a>",
+                        "24/7 Adult Crisis Line: <a href='tel:(502) 589-4313'>(502) 589-4313</a>",
+                        "Schedule first appointment: <a href='tel:(502) 589-1100'>(502) 589-1100</a>"
+                    ],
             email: null,
             details: null,
         },
         {
             name: "St. John Center",
             address: null,
-            contact: "tel:(502) 936-0173",
+            contact: ["<a href='tel:(502) 936-0173'>(502) 936-0173</a>"],
             email: null,
             details: "Contact the Outreach Manager for help at your location",
         },
         {
             name: "Wellspring",
             address: null,
-            contact: `24/7 crisis stabilization unit: tel:(502) 561-1072
-                        Services: tel:(502) 637-4361 `,
+            contact: ["24/7 crisis stabilization unit: <a href='tel:(502) 561-1072'>(502) 561-1072</a>",
+                        "Services: <a href='tel:(502) 637-4361'>(502) 637-4361</a>"],
             email: null,
             details: null,
         },
@@ -533,7 +541,7 @@ const outreach = [
         {
             name: "Catholic Charities",
             address: null,
-            contact: "tel:(502) 637-9786",
+            contact: ["<a href='tel:(502) 637-9786'>(502) 637-9786</a>"],
             email: null,
             details: null,
         },
@@ -547,7 +555,7 @@ const outreach = [
         {
             name: "Center for Accessible Living",
             address: null,
-            contact: "tel:(502) 589-6620",
+            contact: ["<a href='tel:(502) 589-6620'>(502) 589-6620</a>"],
             email: null,
             details: null,
         },
@@ -561,37 +569,30 @@ const outreach = [
         {
             name: "KEPT Inc",
             address: null,
-            contact: "tel:(502) 465-5378",
+            contact: ["<a href='tel:(502) 465-5378'>(502) 465-5378</a>"],
             email: null,
             details: "payee services by appt",
         },
         {
             name: "Legal Aid Society",
-            address: null,
-            contact: "tel:(502) 584-1254",
+            address: [createMapLink("416 W. Muhammad Ali Blvd #300")],
+            contact: ["<a href='tel:(502) 584-1254'>(502) 584-1254</a>"],
             email: null,
-            details: "M-F 9a-5p",
-        },
-        {
-            name: "Legal Aid Society",
-            address: null,
-            contact: "tel:(502) 584-1254",
-            email: null,
-            details: "M-F 9a-5p. 416 W. Muhammad Ali Blvd #300; yourlegalaid.org",
+            details: "M-F 9a-5p <br> <a href='https://yourlegalaid.org' target='_blank'>yourlegalaid.org</a>",
         },
         {
             name: "Louisville Free Public Library",
-            address: "Main Library: 301 York St.Main Library: 301 York St.",
-            contact: "tel:(502) 574-1781",
+            address: [createMapLink("301 York St.")],
+            contact: ["<a href='tel:(502) 574-1781'>(502) 574-1781</a>"],
             email: null,
-            details: "www.lfpl.org. Open Mon-Thu 9a-9p, Fri-Sat, 9a-5p, Sun 1-5p",
+            details: "<a href='https://www.lfpl.org' target='_blank'>www.lfpl.org</a> <br> Open Mon-Thu 9a-9p <br> Fri-Sat 9a-5p <br> Sun 1-5p",
         },
         {
             name: "Useful Contacts",
             address: null,
             contact: null,
             email: null,
-            details: "Dial 2-1-1 for local referrals. Dial 9-8-8 for National Suicide & Crisis Lifeline",
+            details: "Dial: <a href='tel:211'>211</a> for local referrals <br> Dial: <a href='tel:988'>988</a> for National Suicide & Crisis Lifeline",
         },
         ],
     }
@@ -610,85 +611,85 @@ const food = [
         resourceList: [
         {
             name: "Beulah Presbyterian Church (Ramsey Building)",
-            address: "6704 Bardstown",
-            contact: "tel:(502) 435-4313",
+            address: [createMapLink("6704 Bardstown")],
+            contact: ["<a href='tel:(502) 435-4313'>(502) 435-4313</a>"],
             email: null,
             details: "Tu 5:30-6:15pm"
         },
         {
             name: "Cathedral of the Assumption",
-            address: "404 Cathedral Way (alley)",
+            address: [createMapLink("404 Cathedral Way")],
             contact: null,
             email: null,
             details: "Lunch daily 12:15-1pm"
         },
         {
             name: "Feed the City",
-            address: "1100 S. 26th St",
-            contact: "tel:(502) 772-5384",
+            address: [createMapLink("1100 S. 26th St")],
+            contact: ["<a href='tel:(502) 772-5384'>(502) 772-5384</a>"],
             email: null,
             details: "Mo-Sat 1:30-4pm"
         },
         {
             name: "Fourth Ave United Methodist Church",
-            address: "318 W St Catherine",
-            contact: "tel:(502) 585-2176",
+            address: [createMapLink("318 W St Catherine")],
+            contact: ["<a href='tel:(502) 585-2176'>(502) 585-2176</a>"],
             email: null,
             details: "MTThFS 12p"
         },
         {
             name: "Franciscan Kitchen",
-            address: "748 South Preston St.",
-            contact: "tel:(502) 589-0140",
+            address: [createMapLink("748 South Preston St.")],
+            contact: ["<a href='tel:(502) 589-0140'>(502) 589-0140</a>"],
             email: null,
-            details: "Mon-Sat 10:30am-12:30pm (closed 1st Sat of mo)"
+            details: "Mon-Sat 10:30am-12:30pm <br> Closed 1st Sat of month"
         },
         {
             name: "Hip Hop Cares Outreach",
-            address: "First & Broadway",
-            contact: "tel:(502) 457-5317",
+            address: [createMapLink("First & Broadway")],
+            contact: ["<a href='tel:(502) 457-5317'>(502) 457-5317</a>"],
             email: null,
             details: "Su 11:00am"
         },
         {
             name: "Loaves & Fishes Inc",
-            address: "500 E. Caldwell St.",
-            contact: "tel:(502) 718-5264",
+            address: [createMapLink("500 E. Caldwell St.")],
+            contact: ["<a href='tel:(502) 718-5264'>(502) 718-5264</a>"],
             email: null,
             details: "Sat 3-4pm"
         },
         {
             name: "Lord's Kitchen",
-            address: "1811 Standard Ave",
-            contact: "tel:(502) 413-0198",
+            address: [createMapLink("1811 Standard Ave")],
+            contact: ["<a href='tel:(502) 413-0198'>(502) 413-0198</a>"],
             email: null,
             details: "MTThF 12:15p"
         },
         {
             name: "Lost Sheep (serving at Green St. Baptist Church)",
-            address: "519 E. Gray Street",
-            contact: "tel:(502) 539-1378",
+            address: [createMapLink("519 E. Gray Street")],
+            contact: ["<a href='tel:(502) 539-1378'>(502) 539-1378</a>"],
             email: null,
             details: "Thurs 6pm"
         },
         {
             name: "Salvation Army Red Kettle Cafe",
-            address: "911 S Brook St",
-            contact: "tel:(502) 671-4900",
+            address: [createMapLink("911 S Brook St")],
+            contact: ["<a href='tel:(502) 671-4900'>(502) 671-4900</a>"],
             email: null,
             details: "Daily, 11:30a, 5pm"
         },
         {
             name: "St. Augustine Catholic Church",
-            address: "1310 W. Broadway",
-            contact: "tel:(502) 584-4602",
+            address: [createMapLink("1310 W. Broadway")],
+            contact: ["<a href='tel:(502) 584-4602'>(502) 584-4602</a>"],
             email: null,
             details: "Sack lunches: Mon-Thurs 10am-12pm"
         },
         {
             name: "St. Vincent de Paul Open Hand Kitchen",
-            address: "1026 S Jackson St.",
-            contact: "tel:(502) 584-2480",
+            address: [createMapLink("1026 S Jackson St.")],
+            contact: ["<a href='tel:(502) 584-2480'>(502) 584-2480</a>"],
             email: null,
             details: "Daily, 5pm"
         }
@@ -700,38 +701,38 @@ const food = [
         resourceList: [
         {
             name: "Calvary Episcopal Church",
-            address: "821 S. 4th St",
-            contact: "tel:(502) 587-6011",
+            address: [createMapLink("821 S. 4th St")],
+            contact: ["<a href='tel:(502) 587-6011'>(502) 587-6011</a>"],
             email: null,
             details: "Food Pantry MTTh 9:30-11:30a"
         },
         {
             name: "Change Today, Change Tomorrow",
             address: null,
-            contact: "tel:(502) 512-2160",
+            contact: ["<a href='tel:(502) 512-2160'>(502) 512-2160</a>"],
             email: null,
-            details: "@ChangeTodayChangeTomorrow. Feed the West provides pop-up grocery pick-ups "
+            details: "@ChangeTodayChangeTomorrow <br> Feed the West provides pop-up grocery pick-ups"
         },
         {
             name: "Dare to Care Food Bank",
             address: null,
-            contact: "tel:(502) 966-3821",
+            contact: ["<a href='tel:(502) 966-3821'>(502) 966-3821</a>"],
             email: null,
-            details: "https://daretocare.org/need-food/ "
+            details: "<a href='https://daretocare.org/need-food/' target='_blank'>daretocare.org/need-food/</a>"
         },
         {
             name: "Salvation Army Food Pantry",
-            address: "911 South Brook St.",
-            contact: "tel:(502) 671-4900",
+            address: [createMapLink("911 South Brook St.")],
+            contact: ["<a href='tel:(502) 671-4900'>(502) 671-4900</a>"],
             email: null,
             details: "Food box pick-ups on Tuesdays, 1-2pm"
         },
         {
             name: "SNAP (food stamps) ",
-            address: "908 W Broadway",
-            contact: "tel:(855) 306-8959",
+            address: [createMapLink("908 W Broadway")],
+            contact: ["<a href='tel:(855) 306-8959'>(855) 306-8959</a>"],
             email: null,
-            details: "M-F 8a-4:30pm. Get more info or enroll: kynect.ky.gov/benefits "
+            details: "M-F 8a-4:30pm <br> Get more info or enroll: <a href='https://kynect.ky.gov/benefits' target='_blank'>kynect.ky.gov/benefits</a>"
         }
         ],
     }
@@ -745,113 +746,113 @@ const healthCare = [
         generalDetails: null
     },
     {
-        subcategory: null,
+        subcategory: "Health Care",
         note: null,
         resourceList: [
         {
             name: "Brightview Recovery Services",
-            address: "9702 Stonestreet Rd, Ste 120",
-            contact: "tel:(866) 934-7450",
+            address: [createMapLink("9702 Stonestreet Rd, Ste 120")],
+            contact: ["<a href='tel:(866) 934-7450'>(866) 934-7450</a>"],
             email: null,
-            details: "M-F 8a-5p; Sat by appt only ",
+            details: "M-F 8a-5p <br> Sat by appt only",
         },
         {
             name: "DDM Behavioral Health Services",
-            address: "2210 Meadow Drive",
-            contact: "tel:(502) 384-6009",
+            address: [createMapLink("2210 Meadow Drive")],
+            contact: ["<a href='tel:(502) 384-6009'>(502) 384-6009</a>"],
             email: null,
-            details: "M-F 9a-5p; Sat by appt only",
+            details: "M-F 9a-5p <br> Sat by appt only",
         },
         {
             name: "FHC Phoenix Health Care for the Homeless",
-            address: "712 East Muhammad Ali",
-            contact: "tel:(502) 568-6972",
+            address: [createMapLink("712 East Muhammad Ali")],
+            contact: ["<a href='tel:(502) 568-6972'>(502) 568-6972</a>"],
             email: null,
-            details: "Mon-Fri, 7:30am - 4pm",
+            details: "Mon-Fri 7:30am - 4pm",
         },
         {
             name: "Family Community Clinic",
-            address: "1406 E Washington St.",
-            contact: "tel:(502) 384-8444",
+            address: [createMapLink("1406 E Washington St.")],
+            contact: ["<a href='tel:(502) 384-8444'>(502) 384-8444</a>"],
             email: null,
-            details: "M 1-6pm; T 1-5pm; W/Th 9a-5pm; Fri 9a-12:30pm",
+            details: "M 1-6pm <br> T 1-5pm <br> W/Th 9a-5pm <br> Fri 9a-12:30pm",
         },
         {
             name: "Kentucky Health Justice Network",
             address: null,
-            contact: "tel:(502) 576-4576",
+            contact: ["<a href='tel:(502) 576-4576'>(502) 576-4576</a>"],
             email: null,
             details: "Free inclusive help with reproductive health",
         },
         {
-            name: "Norton Children’s Medical Group - Novak Center",
-            address: "411 E Chestnut St, Level 1",
-            contact: "tel:(502) 588-3440",
+            name: "Norton Children's Medical Group - Novak Center",
+            address: [createMapLink("411 E Chestnut St, Level 1")],
+            contact: ["<a href='tel:(502) 588-3440'>(502) 588-3440</a>"],
             email: null,
-            details: "Pediatric primary care, M-F 8am-5pm",
+            details: "Pediatric primary care <br> M-F 8am-5pm",
         },
         {
-            name: "Norton Children’s Hospital Emergency Dept",
-            address: "231 East Chestnut St",
-            contact: "tel:(502) 629-6000",
+            name: "Norton Children's Hospital Emergency Dept",
+            address: [createMapLink("231 East Chestnut St")],
+            contact: ["<a href='tel:(502) 629-6000'>(502) 629-6000</a>"],
             email: null,
             details: null,
         },
         {
             name: "Shawnee Christian Health Center",
-            address: "234 Amy Ave",
-            contact: "tel:(502) 778-0001",
+            address: [createMapLink("234 Amy Ave")],
+            contact: ["<a href='tel:(502) 778-0001'>(502) 778-0001</a>"],
             email: null,
-            details: "MTWF 8:30am-5pm; Th 8:30am-7pm",
+            details: "MTWF 8:30am-5pm <br> Th 8:30am-7pm",
         },
         {
             name: "Louisville Metro Health Department TB Clinic",
-            address: "400 East Gray St.",
-            contact: "tel:(502) 574-6617 to make appt",
+            address: [createMapLink("400 East Gray St.")],
+            contact: ["<a href='tel:(502) 574-6617'>(502) 574-6617</a> to make appt"],
             email: null,
             details: null,
         },
         {
             name: "Planned Parenthood",
-            address: "842 S 7th St",
-            contact: "tel:(800) 769-0045",
+            address: [createMapLink("842 S 7th St")],
+            contact: ["<a href='tel:(800) 769-0045'>(800) 769-0045</a>"],
             email: null,
-            details: "MWThF 8am-4pm; Tues 10am-6pm",
+            details: "MWThF 8am-4pm <br> Tues 10am-6pm",
         },
         {
-            name: "SAMHSA’s National Helpline",
+            name: "SAMHSA's National Helpline",
             address: null,
-            contact: "tel:(800) 662-4357",
+            contact: ["<a href='tel:(800) 662-4357'>(800) 662-4357</a>"],
             email: null,
             details: "For people facing mental or substance abuse crises",
         },
         {
             name: "Seven Counties Services Crisis Line",
             address: null,
-            contact: "tel:(502) 589-4313",
+            contact: ["<a href='tel:(502) 589-4313'>(502) 589-4313</a>"],
             email: null,
             details: null,
         },
         {
             name: "UofL Hospital Emergency Room",
-            address: "530 S Jackson St",
-            contact: "tel:(502) 562-3015",
+            address: [createMapLink("530 S Jackson St")],
+            contact: ["<a href='tel:(502) 562-3015'>(502) 562-3015</a>"],
             email: null,
             details: null,
         },
         {
             name: "UofL 550 Clinic (HIV clinic)",
-            address: "550 S Jackson St",
-            contact: "tel:(502) 561-8844",
+            address: [createMapLink("550 S Jackson St")],
+            contact: ["<a href='tel:(502) 561-8844'>(502) 561-8844</a>"],
             email: null,
             details: "Mon - Fri, 8:30am - 4:30pm",
         },
         {
             name: "Wellspring (mental health/addiction)",
             address: null,
-            contact: "tel:(502) 561-1072",
+            contact: ["<a href='tel:(502) 561-1072'>(502) 561-1072</a>"],
             email: null,
-            details: "Services: (502) 637-4361",
+            details: "Services: <a href='tel:(502) 637-4361'>(502) 637-4361</a>",
         },
         ],
     },
@@ -866,59 +867,57 @@ const jobsAndEducation = [
         generalDetails: null
     },
     {
-        subcategory: null,
+        subcategory: "Jobs & Education",
         note: null,
         resourceList: [
         {
             name: "Blueprint 502",
-            address: "800 S Preston St",
-            contact: "tel:(502) 290-6121",
+            address: [createMapLink("800 S Preston St")],
+            contact: ["<a href='tel:(502) 290-6121'>(502) 290-6121</a>"],
             email: null,
-            details: "blueprint502.org. Full-time education/training for young adults 18-24",
+            details: "<a href='https://blueprint502.org/' target='_blank'>blueprint502.org</a> <br> Full-time education/training for young adults 18-24",
         },
         {
             name: "Family Scholar House",
-            address: "403 Reg Smith",
-            contact: "tel:(502) 584-8090",
+            address: [createMapLink("403 Reg Smith")],
+            contact: ["<a href='tel:(502) 584-8090'>(502) 584-8090</a>"],
             email: null,
             details: "Single parent academic support",
         },
         {
             name: "Goodwill Opportunity Centers",
-            address: `909 E Broadway, 
-                      2820 W. Broadway, 
-                      `,
-            contact: "tel:(844) 495-9675 x0",
+            address: [createMapLink("909 E Broadway"), createMapLink("2820 W. Broadway")],
+            contact: ["<a href='tel:(844) 495-9675,,0'>(844) 495-9675 x0</a>"],
             email: null,
-            details: "216 W. Chestnut (The Spot, young adults 16-24), 6201 Preston Hwy, Suite A (bilingual center)",
+            details: `${createMapLink('216 W. Chestnut')} <br> (The Spot, young adults 16-24) <br><br> ${createMapLink('6201 Preston Hwy, Suite A')} <br> (bilingual center)`,
         },
         {
             name: "Goodwill Industries of KY Excel Center",
-            address: "6203 Preston Hwy",
-            contact: "tel:(502) 337-3322",
+            address: [createMapLink("6203 Preston Hwy")],
+            contact: ["<a href='tel:(502) 337-3322'>(502) 337-3322</a>"],
             email: null,
             details: "Free adult HS",
         },
         {
             name: "Louisville Urban League Workforce Development",
-            address: "1535 West Broadway",
-            contact: "tel:(502) 566-3371",
+            address: [createMapLink("1535 West Broadway")],
+            contact: ["<a href='tel:(502) 566-3371'>(502) 566-3371</a>"],
             email: null,
             details: null,
         },
         {
             name: "Salvation Army Chefs for Success Program",
             address: null,
-            contact: "tel:(502) 671-4900",
+            contact: ["<a href='tel:(502) 671-4900'>(502) 671-4900</a>"],
             email: null,
             details: "Six week culinary training",
         },
         {
             name: "YMCA Safe Place & Youth Development Center",
-            address: "2400 Crittenden Dr",
-            contact: "tel:(502) 635-5233",
+            address: [createMapLink("2400 Crittenden Dr")],
+            contact: ["<a href='tel:(502) 635-5233'>(502) 635-5233</a>"],
             email: null,
-            details: "M-F 9a-2pm. Serving young adults ages 16-22",
+            details: "M-F 9a-2pm <br> Serving young adults ages 16-22",
         },
         ],
     },
@@ -932,36 +931,36 @@ const transitionalHousing = [
         generalDetails: null
     },
     {
-        subcategory: null,
+        subcategory: "Transitional Housing",
         note: null,
         resourceList: [
         {
             name: "House of Ruth",
             address: null,
-            contact: "tel:(502) 589-6605",
+            contact: ["<a href='tel:(502) 589-6605'>(502) 589-6605</a>"],
             email: null,
-            details: "Shelter (502-589-6605), housing, & support (502-587-5080) for people with HIV",
+            details: "Housing & support <br> <a href='tel:(502) 587-5080'>(502) 587-5080</a> for people with HIV",
         },
         {
             name: "Kristy Love Foundation",
             address: null,
-            contact: "tel:(502) 408-3129",
+            contact: ["<a href='tel:(502) 408-3129'>(502) 408-3129</a>"],
             email: null,
             details: "Recovery/housing for addiction/trafficking survivors",
         },
         {
             name: "Mission Sisters",
             address: null,
-            contact: "tel:(502) 396-5094",
+            contact: ["<a href='tel:(502) 396-5094'>(502) 396-5094</a>"],
             email: null,
-            details: "missionsisters.org ",
+            details: "<a href='https://missionsisters.org/' target='_blank'>missionsisters.org</a>",
         },
         {
             name: "Rhonda's Another Chance",
             address: null,
-            contact: "tel:(502) 776-8830",
+            contact: ["<a href='tel:(502) 776-8830'>(502) 776-8830</a>"],
             email: null,
-            details: "Short-term housing for women, rhondashouse.org",
+            details: "Short-term housing for women <br> <a href='https://rhondashouse.org/' target='_blank'>rhondashouse.org</a>",
         },
         ],
     },
@@ -981,7 +980,7 @@ const lgbtqPlus = [
                         discrimination`
     },
     {
-        subcategory: null,
+        subcategory: "LGBTQ+",
         note: null,
         resourceList: [
         {
@@ -989,12 +988,12 @@ const lgbtqPlus = [
             address: null,
             contact: null,
             email: null,
-            details: "Monthly group on 4th Monday, 6-8pm | 18+ only | loutransmascalliance.com",
+            details: "Monthly group on 4th Monday, 6-8pm <br> 18+ only <br> <a href='https://loutransmascalliance.com/' target='_blank'>loutransmascalliance.com</a>",
         },
         {
             name: "Louisville Youth Group",
-            address: "417 E Broadway",
-            contact: "tel:(502) 430-2016",
+            address: [createMapLink("417 E Broadway")],
+            contact: ["<a href='tel:(502) 430-2016'>(502) 430-2016</a>"],
             email: null,
             details: "Group meetings, support, clothing, more",
         },
@@ -1003,18 +1002,18 @@ const lgbtqPlus = [
             address: null,
             contact: null,
             email: null,
-            details: "khjn.org | Assistance accessing affirming care",
+            details: "<a href='https://khjn.org/' target='_blank'>khjn.org</a> <br> Assistance accessing affirming care",
         },
         {
             name: "Sweet Evening Breeze",
-            address: "801 Barrett Avenue #211",
-            contact: "tel:(502) 690-4003",
+            address: [createMapLink("801 Barrett Avenue #211")],
+            contact: ["<a href='tel:(502) 690-4003'>(502) 690-4003</a>"],
             email: null,
-            details: `sweeteveningbreeze.org   
-                        Drop-in services for youth: MTThF 10a-4p 
+            details: `<a href='https://sweeteveningbreeze.org/' target='_blank'>sweeteveningbreeze.org</a> <br>    
+                        Drop-in services for youth: MTThF 10a-4p <br>
                         Services include consultations, housing assistance,  
                         affirming care, snacks, rest area, mental health,  
-                        hygiene, HIV testing, more`,
+                        hygiene, HIV testing, and more`,
         },
         ]
     },
@@ -1028,20 +1027,20 @@ const veterans = [
         generalDetails: "VA Homeless Services are open to veterans not eligible for VA healthcare"
     },
     {
-        subcategory: null,
+        subcategory: "Veterans",
         note: null,
         resourceList: [
         {
             name: "KDVA Homeless Veterans",
             address: null,
-            contact: "tel:(502) 782-5730",
+            contact: ["<a href='tel:(502) 782-5730'>(502) 782-5730</a>"],
             email: null,
             details: null,
         },
         {
             name: "Louisville Metro Office for Veterans",
             address: null,
-            contact: "tel:(502) 574-5748",
+            contact: ["<a href='tel:(502) 574-5748'>(502) 574-5748</a>"],
             email: null,
             details: null,
         },
@@ -1050,33 +1049,33 @@ const veterans = [
             address: null,
             contact: null,
             email: null,
-            details: "24/7 Hotline: 1-877-4AID-VET (1-877-424-3838)",
+            details: "24/7 Hotline: 1-877-4AID-VET <br> <a href='tel:(1-877-424-3838)'>(1-877-424-3838</a>",
         },
         {
             name: "Robley Rex VA Medical Center",
-            address: "800 Zorn Ave",
+            address: [createMapLink("800 Zorn Ave")],
             contact: null,
             email: null,
-            details: `Homeless Program: (502) 287-4178 , (502) 287-4000 | Mental health: (502) 287-6110`,
+            details: `Homeless Program: <a href='tel:(502) 287-4178'>(502) 287-4178</a> <br> <a href='tel:(502) 287-4000'>(502) 287-4000</a> <br> Mental health: <a href='tel:(502) 287-6110'>(502) 287-6110</a>`,
         },
         {
             name: "St. Vincent de Paul Louisville",
             address: null,
-            contact: "tel:(502) 272-2150",
+            contact: ["<a href='tel:(502) 272-2150'>(502) 272-2150</a>"],
             email: null,
-            details: "Permanent housing for veterans Waypoint SRO | svdplou.org/housing-shelter",
+            details: "Permanent housing for veterans <br> <a href='https://svdplou.org/housing-shelter' target='_blank'>svdplou.org/housing-shelter</a>",
         },
         {
             name: "VA Healthcare Hotline",
             address: null,
-            contact: "tel:(877) 222-8387",
+            contact: ["<a href='tel:(877) 222-8387'>(877) 222-8387</a>"],
             email: null,
             details: null,
         },
         {
             name: "VA Regional Office (Veterans Benefits Admin)",
-            address: "321 W Main St, #390",
-            contact: "tel:(800) 827-1000",
+            address: [createMapLink("321 W Main St, #390")],
+            contact: ["<a href='tel:(800) 827-1000'>(800) 827-1000</a>"],
             email: null,
             details: null,
         },
@@ -1085,12 +1084,12 @@ const veterans = [
             address: null,
             contact: null,
             email: null,
-            details: "Dial 988 or text 838255",
+            details: "Dial: <a href='tel:988'>988</a>  <br> Text: <a href='tel:838255'>838255</a>",
         },
         {
             name: "Volunteers of America Mid-States",
-            address: "2820 W. Broadway, Suite 600",
-            contact: "tel:(502) 384-0868",
+            address: [createMapLink("2820 W. Broadway, Suite 600")],
+            contact: ["<a href='tel:(502) 384-0868'>(502) 384-0868</a>"],
             email: null,
             details: "Supportive Services for Veteran Families (SSVF)",
         },
@@ -1107,22 +1106,18 @@ const partnerViolenceAndHumanTrafficking = [
     },
     {
         subcategory: "Partner Violence",
-        note: `If you're facing intimate partner violence and/or 
-                sexual violence, call the Center for Women and 
-                Families' 24/7 crisis line at tel:(502) 581-7222 to receive 
-                supportive services, resources, crisis counseling, and 
-                safety planning. In addition to the crisis line, the 
-                Center provides community resources for survivors; 
-                emergency shelter for survivors of high lethality 
-                intimate partner abuse; and guidance on obtaining 
-                emergency protective orders and legal advocacy`,
+        note: null,
         resourceList: [
         {
             name: "Center for Women and Families",
-            address: "927 S 2nd St.",
-            contact: "tel:(502) 581-7222",
+            address: [createMapLink("927 S 2nd St.")],
+            contact: ["<a href='tel:(502) 581-7222'>(502) 581-7222</a>"],
             email: null,
-            details: "(24-hr hotline) | thecenteronline.org",
+            details: `<a href='https://thecenteronline.org/' target='_blank'>thecenteronline.org</a> <br> (24-hr hotline) <br> 
+            The Center provides community resources for survivors,
+            emergency shelter for survivors of high lethality 
+            intimate partner abuse, and guidance on obtaining 
+            emergency protective orders and legal advocacy`,
         },
         ]
     },
@@ -1133,16 +1128,16 @@ const partnerViolenceAndHumanTrafficking = [
         {
             name: "Kristy Love Foundation",
             address: null,
-            contact: "tel:(502) 408-3129",
+            contact: ["<a href='tel:(502) 408-3129'>(502) 408-3129</a>"],
             email: null,
-            details: "Women in recovery from trafficking/addiction ",
+            details: "Women in recovery from trafficking/addiction",
         },
         {
             name: "Safe Passage",
             address: null,
-            contact: "tel:(502) 324-3013",
+            contact: ["<a href='tel:(502) 324-3013'>(502) 324-3013</a>"],
             email: null,
-            details: "safepassageky.org | M-F 9am-5pm | support services for trafficked and exploited youth",
+            details: "<a href='https://safepassageky.org/' target='_blank'>safepassageky.org</a> <br> M-F 9am-5pm <br> Support services for trafficked and exploited youth",
         },
         ]
     },
@@ -1161,9 +1156,8 @@ const generalResources = [
                         online.  
                         If the agency's response is not satisfactory, the 
                         person may contact Louisville Metro Office of Social 
-                        Services (OSS) at (502) 574-5050. You may also 
-                        come in to OSS at 701 W Ormsby Avenue, Suite 
-                        201, from 8am to 5pm Monday through Friday. 
+                        Services (OSS) at <a href='tel:(502) 574-5050'>(502) 574-5050</a>. You may also 
+                        come in to OSS at ${createMapLink('701 W Ormsby Avenue, Suite 201')}, from 8am to 5pm Monday through Friday. 
                         Please describe what happened and provide any 
                         documentation you have. OSS will contact the 
                         agency within five business days. After that, they will 
@@ -1185,23 +1179,21 @@ const generalResources = [
         {
             name: "Birth Certificate",
             address: null,
-            contact: null,
+            contact: ["<a href='tel:(502) 564-4212'>Office of Vital Statistics: (502) 564-4212</a>"],
             email: null,
             details: `If you were born in Kentucky, 
-                        go to louhomeless.org/birthcert or call the Office of 
-                        Vital Statistics at (502) 564-4212. If you were born 
+                        go to <a href='https://louhomeless.org/birthcert' target='_blank'>louhomeless.org/birthcert</a> or call the Office of 
+                        Vital Statistics at <a href='tel:(502) 564-4212'>(502) 564-4212</a>.<br> If you were born 
                         elsewhere, search the internet for “copy of birth 
                         certificate” with your state/country`,
         },
         {
             name: "Social Security Card",
-            address: null,
-            contact: null,
+            address: [createMapLink('601 W Broadway')],
+            contact: ["<a href='tel:(1-800-772-1213)'>SSNumber: call SSA at (1-800-772-1213)</a>"],
             email: null,
-            details: `See www.ssa.gov/
-                        ssnumber, call SSA at 1-800-772-1213, or go to the 
-                        Louisville SSA office at 601 W Broadway. Bring a 
-                        copy of your birth certificate and a state-issued ID`,
+            details: `See <a href='https://www.ssa.gov/' target='_blank'>www.ssa.gov/</a> <br>
+                         Bring a copy of your birth certificate and a state-issued ID`,
         },
         {
             name: "ID Card",

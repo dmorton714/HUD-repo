@@ -14,11 +14,17 @@ const streetTips = useStreetTips();
 // to the CardsSidebar component, then is emitted from the CardsSidebar component to the StreetTipsView component.
 // Here we use the categoryName get the props for the Category component, and display the category selected.
 const category = ref(null);
+const subcategories = ref([]);
 const showCategory = (categoryName) => {
     for (const [key, object] of Object.entries(streetTips)) {
-        if (categoryName === object[0].categoryName) {category.value = key}
+        if (categoryName === object[0].categoryName) {
+          category.value = key;
+          subcategories.value = []; // clear the subcategories array before adding new subcategories for the selected category
+          for (let i = 1; i < object.length; i++) {
+            subcategories.value.push(object[i]);
+          }
+        }
     }
-    console.log(category.value)// debugging+++++++++++++++++++++
 };
 
 
@@ -41,6 +47,7 @@ const showCategory = (categoryName) => {
         <Category v-else 
         :category-name="streetTips[category][0].categoryName"
         :category-general-details="streetTips[category][0].generalDetails"
+        :subcategories="subcategories"
         />
     </main>
   </div>

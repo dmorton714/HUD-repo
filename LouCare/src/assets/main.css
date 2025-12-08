@@ -1,11 +1,15 @@
 :root {
   --blue: #1D1E9E;
+  --medium-blue: #3D3EBE;
+  --light-blue: #9597FF;
   --gold: #DBA64C;
   --black: #000000;
   --white: #FFFFFF;
   --yellow: #FEBE10;
   --light-gray: #F5F5F5;
-  --dark-gray: #4A4A4A;
+  --medium-gray: #D9D9D9;
+  --dark-gray: #b4b4b4;
+  --black-gray: #4A4A4A;
 }
 
 body {
@@ -28,7 +32,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 400;
   line-height: 1.2;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
