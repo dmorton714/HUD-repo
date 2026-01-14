@@ -1,0 +1,817 @@
+[
+  {
+    "name": "Common Assessment",
+    "address": "1300 S. 4th Street #200",
+    "lat": 38.23097,
+    "lng": -85.75835,
+    "category": "shelters",
+    "subcategory": "Common Assessment for housing and services",
+    "contact": ["<a href='tel:(502) 637-2080'>(502) 637-2080</a>"],
+    "email": null,
+    "details": "Calls: Mon-Fri, 10am-3pm <br>\n                        Walk-ins accepted: Tuesday-Friday, 10am-3pm"
+  },
+  {
+    "name": "Coordinated Shelter Access",
+    "address": "1300 S. 4th Street #250",
+    "lat": 38.23097,
+    "lng": -85.75835,
+    "category": "shelters",
+    "subcategory": "Shelter Referral and Resources",
+    "contact": ["<a href='tel:(502) 637-2337'>(502) 637-2337</a>"],
+    "email": "csa@louhomeless.org",
+    "details": "CSA is closed on these holidays... Open: Mon-Fri, 10am-1pm"
+  },
+  {
+    "name": "Center Ministries (men)",
+    "address": "757 S. Brook St",
+    "lat": 38.2432725,
+    "lng": -85.7516597,
+    "category": "shelters",
+    "subcategory": "Single Overnight Emergency Shelters",
+    "contact": null,
+    "details": "Open 7pm-6:30am <br> Men only <br> Meals not provided.",
+    "email": null
+  },
+  {
+    "name": "Salvation Army Center of Hope",
+    "address": "911 S. Brook St",
+    "lat": 38.2403336,
+    "lng": -85.7519928,
+    "category": "shelters",
+    "subcategory": "Single Overnight Emergency Shelters",
+    "contact": null,
+    "details": "Check in: 5:30p women / 6p men <br> Adults Meals <br> Check in at 9p for 18-24 yos",
+    "email": null
+  },
+  {
+    "name": "St. Vincent de Paul Ozanam Inn (men)",
+    "address": "1034 S. Jackson St.",
+    "lat": 38.2362959,
+    "lng": -85.7475906,
+    "category": "shelters",
+    "subcategory": "Single Overnight Emergency Shelters",
+    "contact": [
+      "<a href='tel:(502) 301-8678'>(502) 301-8678</a>"
+    ],
+    "details": "Men only <br> Meals <br> Check-in times vary, call ahead",
+    "email": null
+  },
+  {
+    "name": "Wayside Christian Mission (singles & low barrier)",
+    "address": "432 E Jefferson St",
+    "lat": 38.2521474,
+    "lng": -85.7449551,
+    "category": "shelters",
+    "subcategory": "Single Overnight Emergency Shelters",
+    "contact": null,
+    "details": "Check-in 4p (s), 3:30p (LB) <br> Men & women <br> Meals provided",
+    "email": null
+  },
+  {
+    "name": "The Healing Place (addiction recovery)",
+    "address": "1020 W Market St.",
+    "lat": 38.2560769,
+    "lng": -85.7676281,
+    "category": "shelters",
+    "subcategory": "Single Overnight Emergency Shelters",
+    "contact": [
+      "<a href='tel:(502) 585-4848'>(502) 585-4848</a>"
+    ],
+    "details": "No reservations <br> First come, first served <br> Check in 3:30pm",
+    "email": null
+  },
+  {
+    "name": "The Healing Place (addiction recovery)",
+    "address": "1503 15th St.",
+    "lat": 38.2266293,
+    "lng": -85.7799164,
+    "category": "shelters",
+    "subcategory": "Single Overnight Emergency Shelters",
+    "contact": [
+      "<a href='tel:(502) 585-4848'>(502) 585-4848</a>"
+    ],
+    "details": "No reservations <br> First come, first served <br> Check in 3:30pm",
+    "email": null
+  },
+  {
+    "name": "The Hope Village (run by The Hope Buss)",
+    "address": "212 E College St",
+    "lat": 38.2428271,
+    "lng": -85.7518184,
+    "category": "shelters",
+    "subcategory": "Safe Outdoor Space",
+    "contact": [
+      "<a href='tel:(502) 882-3900'>(502) 882-3900</a>"
+    ],
+    "details": "New residents need referral from approved agency",
+    "email": null
+  },
+  {
+    "name": "Salvation Army Center of Hope",
+    "address": "911 S. Brook St.",
+    "lat": 38.2403336,
+    "lng": -85.7519928,
+    "category": "shelters",
+    "subcategory": "Family Overnight Emergency Shelters",
+    "contact": null,
+    "details": "Families <br> Meals served",
+    "email": null
+  },
+  {
+    "name": "Volunteers of America",
+    "address": "1321 S. Preston St.",
+    "lat": 38.2303922,
+    "lng": -85.7497596,
+    "category": "shelters",
+    "subcategory": "Family Overnight Emergency Shelters",
+    "contact": null,
+    "details": "Families",
+    "email": null
+  },
+  {
+    "name": "Wayside Christian Mission (family & low-barrier)",
+    "address": "432 E. Jefferson St.",
+    "lat": 38.2521474,
+    "lng": -85.7449551,
+    "category": "shelters",
+    "subcategory": "Family Overnight Emergency Shelters",
+    "contact": null,
+    "details": "Families <br> Meals served",
+    "email": null
+  },
+  {
+    "name": "YMCA Shelter / Youth Development Center",
+    "address": "2400 Crittenden Dr",
+    "lat": 38.210869,
+    "lng": -85.7515886,
+    "category": "shelters",
+    "subcategory": "Young Adult Shelters / Centers",
+    "contact": [
+      "<a href='tel:(502) 635-5233'>(502) 635-5233</a>"
+    ],
+    "details": "24/7 shelter for youth 12-17 <br> Drop-in center for 18-24 yos <br> M-F 8:30a-2p",
+    "email": null
+  },
+  {
+    "name": "TAYLRD (Youth Drop-In Center)",
+    "address": "1020 East Broadway",
+    "lat": 38.2441006,
+    "lng": -85.7344303,
+    "category": "shelters",
+    "subcategory": "Young Adult Shelters / Centers",
+    "contact": [
+      "<a href='tel:(502) 287-0602'>(502) 287-0602</a>"
+    ],
+    "details": "Drop-in for 16-25 yos <br> M-F 2-5pm",
+    "email": null
+  },
+  {
+    "name": "VOCAL-KY",
+    "address": "723 S. Brook St",
+    "lat": 38.2446116,
+    "lng": -85.7516403,
+    "category": "shelters",
+    "subcategory": "Resource Centers",
+    "contact": [
+      "<a href='tel:(502) 676-0039'>(502) 676-0039</a>"
+    ],
+    "details": "Drop-in center: MWTh 10am-2pm <br> Snacks, hygiene, harm reduction supplies, respite, leadership development, organizing, more",
+    "email": null
+  },
+  {
+    "name": "Exodus Family Ministries",
+    "address": "4205 Cane Run Rd",
+    "lat": 38.201474,
+    "lng": -85.8332546,
+    "category": "shelters",
+    "subcategory": "Emergency Day Shelters",
+    "contact": [
+      "<a href='tel:(502) 614-8544,,x105'>(502) 614-8544 x105</a>"
+    ],
+    "details": "Adults 18 <br> MWF 11a-3p (women only Wed; men only Fri)",
+    "email": null
+  },
+  {
+    "name": "Center Ministries",
+    "address": "757 S. Brook St",
+    "lat": 38.2432725,
+    "lng": -85.7516597,
+    "category": "shelters",
+    "subcategory": "Emergency Day Shelters",
+    "contact": [
+      "<a href='tel: (502) 584-6543,,x105'>(502) 584-6543 x105</a>"
+    ],
+    "details": "Women & children only <br> Mon-Fri, 8am-2pm <br> Offers storage",
+    "email": null
+  },
+  {
+    "name": "Salvation Army Day Center",
+    "address": "911 S. Brook St",
+    "lat": 38.2403336,
+    "lng": -85.7519928,
+    "category": "shelters",
+    "subcategory": "Emergency Day Shelters",
+    "contact": [
+      "<a href='tel:(502) 671-4900'>(502) 671-4900</a>"
+    ],
+    "details": "Enter from Breckinridge <br> Open M-F 9-3:30p <br> Adults only (18+) <br> Offers storage, clothing, closet, toiletries, lunch",
+    "email": null
+  },
+  {
+    "name": "St. John Center (men only)",
+    "address": "700 E. Muhammad Ali",
+    "lat": 38.2520932,
+    "lng": -85.7662128,
+    "category": "shelters",
+    "subcategory": "Emergency Day Shelters",
+    "contact": [
+      "<a href='tel:(502) 568-6758'>(502) 568-6758</a>"
+    ],
+    "details": "Daily 8a-4p, but W 8a-2p <br> Trans and gender diverse folx welcome",
+    "email": null
+  },
+  {
+    "name": "UP for Women & Children",
+    "address": "425 S 2nd St",
+    "lat": 38.2517292,
+    "lng": -85.7537839,
+    "category": "shelters",
+    "subcategory": "Emergency Day Shelters",
+    "contact": [
+      "<a href='tel:(502) 384-0001'>(502) 384-0001</a>"
+    ],
+    "details": "Women/children <br> Open MW 9a-3pm; F 9a-1pm <br> Trans and gender diverse people welcome",
+    "email": null
+  },
+  {
+    "name": "Salvation Army Center of Hope",
+    "address": "911 South Brook St.",
+    "lat": 38.2403336,
+    "lng": -85.7519928,
+    "category": "whiteFlag",
+    "subcategory": "White Flag",
+    "contact": [
+      "<a href='tel:(502) 671-4900'>(502) 671-4900</a>"
+    ],
+    "details": null,
+    "email": null
+  },
+  {
+    "name": "Wayside Christian Mission",
+    "address": "432 East Jefferson St.",
+    "lat": 38.2521474,
+    "lng": -85.7449551,
+    "category": "whiteFlag",
+    "subcategory": "White Flag",
+    "contact": [
+      "<a href='tel:(502) 742-7019'>(502) 742-7019</a>"
+    ],
+    "details": "Call CSA at <a href='tel:(502) 637-2337'>(502) 637-2337</a> for info & notifications",
+    "email": null
+  },
+  {
+    "name": "My Dog Eats First",
+    "address": "2640 Gleeson Lane Ste 2D",
+    "lat": 38.17889,
+    "lng": -85.63167,
+    "category": "familyAndChildren",
+    "subcategory": "Pet Needs",
+    "contact": ["<a href='tel:(502) 694-2746'>(502) 694-2746</a>"],
+    "email": null,
+    "details": "Contact for vet care, other help for houseless pets"
+  },
+  {
+    "name": "Legal Aid Society",
+    "address": "416 W. Muhammad Ali Blvd #300",
+    "lat": 38.2510215,
+    "lng": -85.758568,
+    "category": "outreach",
+    "subcategory": "Other Resources",
+    "contact": [
+      "<a href='tel:(502) 584-1254'>(502) 584-1254</a>"
+    ],
+    "details": "M-F 9a-5p <br> <a href='https://yourlegalaid.org' target='_blank'>yourlegalaid.org</a>",
+    "email": null
+  },
+  {
+    "name": "Louisville Free Public Library",
+    "address": "301 York St.",
+    "lat": 38.2449282,
+    "lng": -85.7577588,
+    "category": "outreach",
+    "subcategory": "Other Resources",
+    "contact": [
+      "<a href='tel:(502) 574-1781'>(502) 574-1781</a>"
+    ],
+    "details": "<a href='https://www.lfpl.org' target='_blank'>www.lfpl.org</a> <br> Open Mon-Thu 9a-9p <br> Fri-Sat 9a-5p <br> Sun 1-5p",
+    "email": null
+  },
+  {
+    "name": "Beulah Presbyterian Church (Ramsey Building)",
+    "address": "6704 Bardstown",
+    "lat": 38.1491924,
+    "lng": -85.5874101,
+    "category": "food",
+    "subcategory": "Meals",
+    "contact": [
+      "<a href='tel:(502) 435-4313'>(502) 435-4313</a>"
+    ],
+    "details": "Tu 5:30-6:15pm",
+    "email": null
+  },
+  {
+    "name": "Cathedral of the Assumption",
+    "address": "404 Cathedral Way",
+    "lat": 38.2516565,
+    "lng": -85.7581215,
+    "category": "food",
+    "subcategory": "Meals",
+    "contact": null,
+    "details": "Lunch daily 12:15-1pm",
+    "email": null
+  },
+  {
+    "name": "Feed the City",
+    "address": "1100 S. 26th St",
+    "lat": 38.2403792,
+    "lng": -85.7963793,
+    "category": "food",
+    "subcategory": "Meals",
+    "contact": [
+      "<a href='tel:(502) 772-5384'>(502) 772-5384</a>"
+    ],
+    "details": "Mo-Sat 1:30-4pm",
+    "email": null
+  },
+  {
+    "name": "Fourth Ave United Methodist Church",
+    "address": "318 W St Catherine",
+    "lat": 38.2373873,
+    "lng": -85.7614738,
+    "category": "food",
+    "subcategory": "Meals",
+    "contact": [
+      "<a href='tel:(502) 585-2176'>(502) 585-2176</a>"
+    ],
+    "details": "MTThFS 12p",
+    "email": null
+  },
+  {
+    "name": "Franciscan Kitchen",
+    "address": "748 South Preston St.",
+    "lat": 38.2432515,
+    "lng": -85.7482601,
+    "category": "food",
+    "subcategory": "Meals",
+    "contact": [
+      "<a href='tel:(502) 589-0140'>(502) 589-0140</a>"
+    ],
+    "details": "Mon-Sat 10:30am-12:30pm <br> Closed 1st Sat of month",
+    "email": null
+  },
+  {
+    "name": "Hip Hop Cares Outreach",
+    "address": "First & Broadway",
+    "lat": 38.2454987,
+    "lng": -85.7467324,
+    "category": "food",
+    "subcategory": "Meals",
+    "contact": [
+      "<a href='tel:(502) 457-5317'>(502) 457-5317</a>"
+    ],
+    "details": "Su 11:00am",
+    "email": null
+  },
+  {
+    "name": "Loaves & Fishes Inc",
+    "address": "500 E. Caldwell St.",
+    "lat": 38.2389138,
+    "lng": -85.7449988,
+    "category": "food",
+    "subcategory": "Meals",
+    "contact": [
+      "<a href='tel:(502) 718-5264'>(502) 718-5264</a>"
+    ],
+    "details": "Sat 3-4pm",
+    "email": null
+  },
+  {
+    "name": "Lord's Kitchen",
+    "address": "1811 Standard Ave",
+    "lat": 38.2314438,
+    "lng": -85.7902201,
+    "category": "food",
+    "subcategory": "Meals",
+    "contact": [
+      "<a href='tel:(502) 413-0198'>(502) 413-0198</a>"
+    ],
+    "details": "MTThF 12:15p",
+    "email": null
+  },
+  {
+    "name": "Lost Sheep (serving at Green St. Baptist Church)",
+    "address": "519 E. Gray Street",
+    "lat": 38.2465753,
+    "lng": -85.7443985,
+    "category": "food",
+    "subcategory": "Meals",
+    "contact": [
+      "<a href='tel:(502) 539-1378'>(502) 539-1378</a>"
+    ],
+    "details": "Thurs 6pm",
+    "email": null
+  },
+  {
+    "name": "Salvation Army Red Kettle Cafe",
+    "address": "911 S Brook St",
+    "lat": 38.2403336,
+    "lng": -85.7519928,
+    "category": "food",
+    "subcategory": "Meals",
+    "contact": [
+      "<a href='tel:(502) 671-4900'>(502) 671-4900</a>"
+    ],
+    "details": "Daily, 11:30a, 5pm",
+    "email": null
+  },
+  {
+    "name": "St. Augustine Catholic Church",
+    "address": "1310 W. Broadway",
+    "lat": 38.2472942,
+    "lng": -85.7741592,
+    "category": "food",
+    "subcategory": "Meals",
+    "contact": [
+      "<a href='tel:(502) 584-4602'>(502) 584-4602</a>"
+    ],
+    "details": "Sack lunches: Mon-Thurs 10am-12pm",
+    "email": null
+  },
+  {
+    "name": "St. Vincent de Paul Open Hand Kitchen",
+    "address": "1026 S Jackson St.",
+    "lat": 38.2364467,
+    "lng": -85.7474838,
+    "category": "food",
+    "subcategory": "Meals",
+    "contact": [
+      "<a href='tel:(502) 584-2480'>(502) 584-2480</a>"
+    ],
+    "details": "Daily, 5pm",
+    "email": null
+  },
+  {
+    "name": "Calvary Episcopal Church",
+    "address": "821 S. 4th St",
+    "lat": 38.243266,
+    "lng": -85.7583905,
+    "category": "food",
+    "subcategory": "Food Resources",
+    "contact": [
+      "<a href='tel:(502) 587-6011'>(502) 587-6011</a>"
+    ],
+    "details": "Food Pantry MTTh 9:30-11:30a",
+    "email": null
+  },
+  {
+    "name": "Salvation Army Food Pantry",
+    "address": "911 South Brook St.",
+    "lat": 38.2403336,
+    "lng": -85.7519928,
+    "category": "food",
+    "subcategory": "Food Resources",
+    "contact": [
+      "<a href='tel:(502) 671-4900'>(502) 671-4900</a>"
+    ],
+    "details": "Food box pick-ups on Tuesdays, 1-2pm",
+    "email": null
+  },
+  {
+    "name": "SNAP (food stamps) ",
+    "address": "908 W Broadway",
+    "lat": 38.246675,
+    "lng": -85.7673472,
+    "category": "food",
+    "subcategory": "Food Resources",
+    "contact": [
+      "<a href='tel:(855) 306-8959'>(855) 306-8959</a>"
+    ],
+    "details": "M-F 8a-4:30pm <br> Get more info or enroll: <a href='https://kynect.ky.gov/benefits' target='_blank'>kynect.ky.gov/benefits</a>",
+    "email": null
+  },
+  {
+    "name": "Brightview Recovery Services",
+    "address": "9702 Stonestreet Rd, Ste 120",
+    "lat": 38.27472,
+    "lng": -85.59583,
+    "category": "healthCare",
+    "subcategory": "Health Care",
+    "contact": ["<a href='tel:(866) 934-7450'>(866) 934-7450</a>"],
+    "email": null,
+    "details": "M-F 8a-5p <br> Sat by appt only"
+  },
+  {
+    "name": "DDM Behavioral Health Services",
+    "address": "2210 Meadow Drive",
+    "lat": 38.2042845,
+    "lng": -85.6640487,
+    "category": "healthCare",
+    "subcategory": "Health Care",
+    "contact": [
+      "<a href='tel:(502) 384-6009'>(502) 384-6009</a>"
+    ],
+    "details": "M-F 9a-5p <br> Sat by appt only",
+    "email": null
+  },
+  {
+    "name": "FHC Phoenix Health Care for the Homeless",
+    "address": "712 East Muhammad Ali",
+    "lat": 38.2490157,
+    "lng": -85.740002,
+    "category": "healthCare",
+    "subcategory": "Health Care",
+    "contact": [
+      "<a href='tel:(502) 568-6972'>(502) 568-6972</a>"
+    ],
+    "details": "Mon-Fri 7:30am - 4pm",
+    "email": null
+  },
+  {
+    "name": "Family Community Clinic",
+    "address": "1406 E Washington St.",
+    "lat": 38.2573928,
+    "lng": -85.726496,
+    "category": "healthCare",
+    "subcategory": "Health Care",
+    "contact": [
+      "<a href='tel:(502) 384-8444'>(502) 384-8444</a>"
+    ],
+    "details": "M 1-6pm <br> T 1-5pm <br> W/Th 9a-5pm <br> Fri 9a-12:30pm",
+    "email": null
+  },
+  {
+    "name": "Norton Children's Medical Group - Novak Center",
+    "address": "411 E Chestnut St, Level 1",
+    "lat": 38.24861,
+    "lng": -85.74778,
+    "category": "healthCare",
+    "subcategory": "Health Care",
+    "contact": ["<a href='tel:(502) 588-3440'>(502) 588-3440</a>"],
+    "email": null,
+    "details": "Pediatric primary care <br> M-F 8am-5pm"
+  },
+  {
+    "name": "Norton Children's Hospital Emergency Dept",
+    "address": "231 East Chestnut St",
+    "lat": 38.2484477,
+    "lng": -85.7497368,
+    "category": "healthCare",
+    "subcategory": "Health Care",
+    "contact": [
+      "<a href='tel:(502) 629-6000'>(502) 629-6000</a>"
+    ],
+    "details": null,
+    "email": null
+  },
+  {
+    "name": "Shawnee Christian Health Center",
+    "address": "234 Amy Ave",
+    "lat": 38.2603589,
+    "lng": -85.813651,
+    "category": "healthCare",
+    "subcategory": "Health Care",
+    "contact": [
+      "<a href='tel:(502) 778-0001'>(502) 778-0001</a>"
+    ],
+    "details": "MTWF 8:30am-5pm <br> Th 8:30am-7pm",
+    "email": null
+  },
+  {
+    "name": "Louisville Metro Health Department TB Clinic",
+    "address": "400 East Gray St.",
+    "lat": 38.2460332,
+    "lng": -85.7464594,
+    "category": "healthCare",
+    "subcategory": "Health Care",
+    "contact": [
+      "<a href='tel:(502) 574-6617'>(502) 574-6617</a> to make appt"
+    ],
+    "details": null,
+    "email": null
+  },
+  {
+    "name": "Planned Parenthood",
+    "address": "842 S 7th St",
+    "lat": 38.2433502,
+    "lng": -85.7644289,
+    "category": "healthCare",
+    "subcategory": "Health Care",
+    "contact": [
+      "<a href='tel:(800) 769-0045'>(800) 769-0045</a>"
+    ],
+    "details": "MWThF 8am-4pm <br> Tues 10am-6pm",
+    "email": null
+  },
+  {
+    "name": "UofL Hospital Emergency Room",
+    "address": "530 S Jackson St",
+    "lat": 38.2483107,
+    "lng": -85.7450689,
+    "category": "healthCare",
+    "subcategory": "Health Care",
+    "contact": [
+      "<a href='tel:(502) 562-3015'>(502) 562-3015</a>"
+    ],
+    "details": null,
+    "email": null
+  },
+  {
+    "name": "UofL 550 Clinic (HIV clinic)",
+    "address": "550 S Jackson St",
+    "lat": 38.248538,
+    "lng": -85.745113,
+    "category": "healthCare",
+    "subcategory": "Health Care",
+    "contact": [
+      "<a href='tel:(502) 561-8844'>(502) 561-8844</a>"
+    ],
+    "details": "Mon - Fri, 8:30am - 4:30pm",
+    "email": null
+  },
+  {
+    "name": "Blueprint 502",
+    "address": "800 S Preston St",
+    "lat": 38.2423956,
+    "lng": -85.7484368,
+    "category": "jobsAndEducation",
+    "subcategory": "Jobs & Education",
+    "contact": [
+      "<a href='tel:(502) 290-6121'>(502) 290-6121</a>"
+    ],
+    "details": "<a href='https://blueprint502.org/' target='_blank'>blueprint502.org</a> <br> Full-time education/training for young adults 18-24",
+    "email": null
+  },
+  {
+    "name": "Family Scholar House",
+    "address": "403 Reg Smith",
+    "lat": 38.2233803,
+    "lng": -85.7638579,
+    "category": "jobsAndEducation",
+    "subcategory": "Jobs & Education",
+    "contact": [
+      "<a href='tel:(502) 584-8090'>(502) 584-8090</a>"
+    ],
+    "details": "Single parent academic support",
+    "email": null
+  },
+  {
+    "name": "Goodwill Opportunity Centers",
+    "address": "909 E Broadway",
+    "lat": 38.2448442,
+    "lng": -85.736808,
+    "category": "jobsAndEducation",
+    "subcategory": "Jobs & Education",
+    "contact": [
+      "<a href='tel:(844) 495-9675,,0'>(844) 495-9675 x0</a>"
+    ],
+    "details": "<a href=\"https://www.google.com/maps/search/?api=1&query=216%20W.%20Chestnut\" target=\"_blank\">216 W. Chestnut</a> <br> (The Spot, young adults 16-24) <br><br> <a href=\"https://www.google.com/maps/search/?api=1&query=6201%20Preston%20Hwy%2C%20Suite%20A\" target=\"_blank\">6201 Preston Hwy, Suite A</a> <br> (bilingual center)",
+    "email": null
+  },
+  {
+    "name": "Goodwill Opportunity Centers",
+    "address": "2820 W. Broadway",
+    "lat": 38.2489493,
+    "lng": -85.7988613,
+    "category": "jobsAndEducation",
+    "subcategory": "Jobs & Education",
+    "contact": [
+      "<a href='tel:(844) 495-9675,,0'>(844) 495-9675 x0</a>"
+    ],
+    "details": "<a href=\"https://www.google.com/maps/search/?api=1&query=216%20W.%20Chestnut\" target=\"_blank\">216 W. Chestnut</a> <br> (The Spot, young adults 16-24) <br><br> <a href=\"https://www.google.com/maps/search/?api=1&query=6201%20Preston%20Hwy%2C%20Suite%20A\" target=\"_blank\">6201 Preston Hwy, Suite A</a> <br> (bilingual center)",
+    "email": null
+  },
+  {
+    "name": "Goodwill Industries of KY Excel Center",
+    "address": "6203 Preston Hwy",
+    "lat": 38.1615848,
+    "lng": -85.6995386,
+    "category": "jobsAndEducation",
+    "subcategory": "Jobs & Education",
+    "contact": [
+      "<a href='tel:(502) 337-3322'>(502) 337-3322</a>"
+    ],
+    "details": "Free adult HS",
+    "email": null
+  },
+  {
+    "name": "Louisville Urban League Workforce Development",
+    "address": "1535 West Broadway",
+    "lat": 38.2489605,
+    "lng": -85.7777717,
+    "category": "jobsAndEducation",
+    "subcategory": "Jobs & Education",
+    "contact": [
+      "<a href='tel:(502) 566-3371'>(502) 566-3371</a>"
+    ],
+    "details": null,
+    "email": null
+  },
+  {
+    "name": "YMCA Safe Place & Youth Development Center",
+    "address": "2400 Crittenden Dr",
+    "lat": 38.210869,
+    "lng": -85.7515886,
+    "category": "jobsAndEducation",
+    "subcategory": "Jobs & Education",
+    "contact": [
+      "<a href='tel:(502) 635-5233'>(502) 635-5233</a>"
+    ],
+    "details": "M-F 9a-2pm <br> Serving young adults ages 16-22",
+    "email": null
+  },
+  {
+    "name": "Louisville Youth Group",
+    "address": "417 E Broadway",
+    "lat": 38.2455709,
+    "lng": -85.7466751,
+    "category": "lgbtqPlus",
+    "subcategory": "LGBTQ+",
+    "contact": [
+      "<a href='tel:(502) 430-2016'>(502) 430-2016</a>"
+    ],
+    "details": "Group meetings, support, clothing, more",
+    "email": null
+  },
+  {
+    "name": "Sweet Evening Breeze",
+    "address": "801 Barrett Avenue #211",
+    "lat": 38.23056,
+    "lng": -85.74611,
+    "category": "lgbtqPlus",
+    "subcategory": "LGBTQ+",
+    "contact": ["<a href='tel:(502) 690-4003'>(502) 690-4003</a>"],
+    "email": null,
+    "details": "Drop-in services for youth: MTThF 10a-4p..."
+  },
+  {
+    "name": "Robley Rex VA Medical Center",
+    "address": "800 Zorn Ave",
+    "lat": 38.2708365,
+    "lng": -85.6975316,
+    "category": "veterans",
+    "subcategory": "Veterans",
+    "contact": null,
+    "details": "Homeless Program: <a href='tel:(502) 287-4178'>(502) 287-4178</a> <br> <a href='tel:(502) 287-4000'>(502) 287-4000</a> <br> Mental health: <a href='tel:(502) 287-6110'>(502) 287-6110</a>",
+    "email": null
+  },
+  {
+    "name": "VA Regional Office (Veterans Benefits Admin)",
+    "address": "321 W Main St, #390",
+    "lat": 38.2568555,
+    "lng": -85.7551636,
+    "category": "veterans",
+    "subcategory": "Veterans",
+    "contact": [
+      "<a href='tel:(800) 827-1000'>(800) 827-1000</a>"
+    ],
+    "details": null,
+    "email": null
+  },
+  {
+    "name": "Volunteers of America Mid-States",
+    "address": "2820 W. Broadway, Suite 600",
+    "lat": 38.24895,
+    "lng": -85.79886,
+    "category": "veterans",
+    "subcategory": "Veterans",
+    "contact": ["<a href='tel:(502) 384-0868'>(502) 384-0868</a>"],
+    "email": null,
+    "details": "Supportive Services for Veteran Families (SSVF)"
+  },
+  {
+    "name": "Center for Women and Families",
+    "address": "927 S 2nd St.",
+    "lat": 38.2401502,
+    "lng": -85.7558227,
+    "category": "partnerViolenceAndHumanTrafficking",
+    "subcategory": "Partner Violence",
+    "contact": [
+      "<a href='tel:(502) 581-7222'>(502) 581-7222</a>"
+    ],
+    "details": "<a href='https://thecenteronline.org/' target='_blank'>thecenteronline.org</a> <br> (24-hr hotline) <br> \n            The Center provides community resources for survivors,\n            emergency shelter for survivors of high lethality \n            intimate partner abuse, and guidance on obtaining \n            emergency protective orders and legal advocacy",
+    "email": null
+  },
+  {
+    "name": "Social Security Card",
+    "address": "601 W Broadway",
+    "lat": 38.2469692,
+    "lng": -85.7624798,
+    "category": "generalResources",
+    "subcategory": "Getting Identifying Documents",
+    "contact": [
+      "<a href='tel:(1-800-772-1213)'>SSNumber: call SSA at (1-800-772-1213)</a>"
+    ],
+    "details": "See <a href='https://www.ssa.gov/' target='_blank'>www.ssa.gov/</a> <br>\n                         Bring a copy of your birth certificate and a state-issued ID",
+    "email": null
+  }
+]

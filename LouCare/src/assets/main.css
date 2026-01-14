@@ -12,6 +12,8 @@
   --black-gray: #4A4A4A;
 }
 
+
+
 body {
   background-color: var(--white);
   color: var(--black);
