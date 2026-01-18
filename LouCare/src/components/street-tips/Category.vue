@@ -19,7 +19,7 @@ defineProps({
 </script>
 
 <template>
-    <div class="bg-[var(--light-gray)] flex flex-col w-full h-full justify-center items-center p-4 gap-10 rounded-md">
+    <div class="hidden min-[900px]:flex bg-[var(--light-gray)] flex flex-col w-full h-full justify-center items-center p-4 gap-10 rounded-md">
         <h2 v-html="categoryName"></h2>
         <p v-if="categoryGeneralDetails" v-html="categoryGeneralDetails"></p>
         <div class="flex flex-col w-full h-full justify-center items-center p-4 gap-6 rounded-md">

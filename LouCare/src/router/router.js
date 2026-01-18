@@ -12,6 +12,11 @@ const routes = [
     path: '/street-tips',
     component: StreetTipsView,
   },
+  {
+    path: '/SubcategoryDetails/:category/:subName', 
+    name: 'SubcategoryInfoView',
+    component: () => import('../views/SubcategoryInfoView.vue')
+  }
 ];
 
 const router = createRouter({
