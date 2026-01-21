@@ -34,6 +34,7 @@ function createMapLink(address) {
 const shelters = [
     {
         categoryName: "Shelters",
+        categoryIcon: "house",
         description: 'Emergency shelter, bed reservations, and referrals to other social services',
         generalDetails: null
     },
@@ -223,6 +224,7 @@ const shelters = [
 const whiteFlag = [
     {
         categoryName: "White Flag",
+        categoryIcon: "whiteflag",
         description: 'Indoor shelter during extreme weather events',
         generalDetails: `The Coalition coordinates Operation: White Flag 
                         so you can go indoors during extreme weather: 
@@ -261,6 +263,7 @@ const whiteFlag = [
 const familyAndChildren = [
     {
         categoryName: "Family and Children",
+        categoryIcon: "family",
         description: 'Services for families and children in need of housing, shelter, and educational assistance',
         generalDetails: null
     },
@@ -330,6 +333,7 @@ const familyAndChildren = [
 const outreach = [
     {
         categoryName: "Outreach",
+        categoryIcon: "outreach",
         description: 'Volunteer groups working with unhoused people in the community',
         generalDetails: null
     },
@@ -602,6 +606,7 @@ const outreach = [
 const food = [
     {
         categoryName: "Food",
+        categoryIcon: "food",
         description: 'Meals and food assistance contacts',
         generalDetails: null
     },
@@ -742,6 +747,7 @@ const food = [
 const healthCare = [
     {
         categoryName: "Health Care",
+        categoryIcon: "healthcare",
         description: 'Medical care and treatment contacts',
         generalDetails: null
     },
@@ -863,6 +869,7 @@ const healthCare = [
 const jobsAndEducation = [
     {
         categoryName: "Jobs & Education",
+        categoryIcon: "suitcase",
         description: 'Job training and education contacts',
         generalDetails: null
     },
@@ -927,6 +934,7 @@ const jobsAndEducation = [
 const transitionalHousing = [
     {
         categoryName: "Transitional Housing",
+        categoryIcon: "househeart",
         description: 'Temporary housing contacts',
         generalDetails: null
     },
@@ -970,6 +978,7 @@ const transitionalHousing = [
 const lgbtqPlus = [
     {
         categoryName: "LGBTQ+",
+        categoryIcon: "lgbtq",
         description: 'Group meetings, support, clothing, and more resources',
         generalDetails: `If you believe you're experiencing 
                         discrimination, you may file a complaint through 
@@ -1023,6 +1032,7 @@ const lgbtqPlus = [
 const veterans = [
     {
         categoryName: "Veterans",
+        categoryIcon: "medal",
         description: 'Housing, benefits, support, and more resources for veterans',
         generalDetails: "VA Homeless Services are open to veterans not eligible for VA healthcare"
     },
@@ -1101,6 +1111,7 @@ const veterans = [
 const partnerViolenceAndHumanTrafficking = [
     {
         categoryName: "Partner Violence & Human Trafficking",
+        categoryIcon: "helpinghands",
         description: 'Support services for victims of partner violence and human trafficking',
         generalDetails: null
     },
@@ -1147,6 +1158,7 @@ const partnerViolenceAndHumanTrafficking = [
 const generalResources = [
     {
         categoryName: "General Resources",
+        categoryIcon: "resources",
         description: 'Get IDs, birth certificates, Social Security cards, and file shelter complaints',
         generalDetails: `If any person experiencing homelessness has an 
                         issue, complaint, or concern about a Louisville 
