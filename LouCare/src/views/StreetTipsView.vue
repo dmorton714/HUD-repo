@@ -44,11 +44,13 @@ const showCategory = (categoryName) => {
         title="Street Tips"
         description="A quick reference guide for people in need of shelter, outreach services, food, healthcare, and other help in Louisville, KY" 
         />
-        <Category v-else 
-        :category-name="streetTips[category][0].categoryName"
-        :category-general-details="streetTips[category][0].generalDetails"
-        :subcategories="subcategories"
-        />
+        <div v-else class="flex flex-col w-full items-center justify-center">
+          <Category 
+          :category-name="streetTips[category][0].categoryName"
+          :category-general-details="streetTips[category][0].generalDetails"
+          :subcategories="subcategories"
+          />
+        </div>
     </main>
   </div>
 </template>

@@ -19,7 +19,6 @@ defineProps({
 
 const showDetails = ref(false);
 </script>
-
 <template>
     <div class="bg-[var(--dark-gray)] flex flex-col justify-around items-center w-full max-w-80 h-auto min-h-64 p-4 gap-4 rounded-xl">
         <h3 class="self-center" v-html="name"></h3>
@@ -39,7 +38,6 @@ const showDetails = ref(false);
         </div>
     </div>
 </template>
-
 <style scoped>
     .hover-scale-105:hover {
         transform: scale(1.05);
