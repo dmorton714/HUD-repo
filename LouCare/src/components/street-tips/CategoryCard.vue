@@ -15,18 +15,13 @@ defineProps({
 });
 
 const showDescription = ref(false);
-const showMap = ref(false);
 
 </script>
 <template>
-    <div :class="[{active:isActive}, 'bg-[var(--blue)] flex w-full h-full gap-4 p-4 items-center justify-between rounded-md hover:bg-[var(--gold)] hover:scale-105 transition-all duration-200 cursor-pointer']">
-        <div class="flex w-full h-full items-center justify-center"
-        @click="$emit('categorySelected', categoryName)">
+    <div :class="[{active:isActive}, 'bg-[var(--blue)] flex w-full h-full gap-4 p-4 items-center justify-between rounded-md hover:bg-[var(--gold)] hover:scale-105 transition-all duration-200 cursor-pointer']"
+    @click="$emit('categorySelected', categoryName)">
+        <div class="flex w-full h-full items-center justify-center">
             <h3 class="text-center text-white w-full">{{ categoryName }}</h3>
-        </div>
-        <div class="flex items-center justify-center px-2 py-1 rounded-md border border-[var(--light-gray)] hover:bg-[var(--blue)] hover:scale-105 transition-all duration-200 cursor-pointer"
-        @click.stop="showMap = true">
-            <p class="text-white">Map</p>
         </div>
         <div class="flex items-center justify-center hover:cursor-pointer relative" @click="showDescription = true" @mouseleave="showDescription = false">
             <img src="/question.svg" alt="Question mark" class="w-8 h-8">

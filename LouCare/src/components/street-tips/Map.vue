@@ -11,7 +11,7 @@
             required: true
         }
     })
-    
+    console.log(props.subcategories);
     const mapCenter = ref([38.2527, -85.7585]); // Downtown Louisville
     
     // Filter the locations based on the subcategories that are passed as props
@@ -57,6 +57,7 @@
 
             <!-- Map -->
             <LMap 
+                :use-global-leaflet="false"
                 :zoom="11" 
                 :center="mapCenter"
                 class="h-full w-full"
