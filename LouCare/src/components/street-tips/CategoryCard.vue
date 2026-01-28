@@ -47,7 +47,7 @@ const selectSubcategory = (subcategoryName) => {
 const goBackToSubcategories = () => {
     selectedSubcategory.value = null;
 };
-// const showMap = ref(false);
+
 
 
 </script>
@@ -56,14 +56,10 @@ const goBackToSubcategories = () => {
         {active:isActive}, 
         'hidden min-[900px]:flex bg-[var(--blue)] flex w-full h-full gap-4 p-4 items-center justify-between rounded-md transition-all duration-200 cursor-pointer',
         'min-[900px]:hover:bg-[var(--gold)] min-[900px]:hover:scale-105'
-    ]">
-        <div class="flex w-full h-full items-center justify-center"
-        @click="$emit('categorySelected', categoryName)">
+    ]"
+    @click="$emit('categorySelected', categoryName)">
+        <div class="flex w-full h-full items-center justify-center">
             <h3 class="text-center text-white w-full">{{ categoryName }}</h3>
-        </div>
-        <div class="flex items-center justify-center px-2 py-1 rounded-md border border-[var(--light-gray)] hover:bg-[var(--blue)] hover:scale-105 transition-all duration-200 cursor-pointer"
-        @click.stop="showMap = true">
-            <p class="text-white">Map</p>
         </div>
         <div class="flex items-center justify-center hover:cursor-pointer relative" @click="showDescription = true" @mouseleave="showDescription = false">
             <img src="/question.svg" alt="Question mark" class="w-8 h-8">
