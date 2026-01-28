@@ -75,6 +75,7 @@ const showCategory = (categoryName) => {
   flex-direction: column;
   align-items: left;
   gap: 10px;
+  z-index: 10;
 }
 
 /* Main hero content */
